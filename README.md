@@ -11,7 +11,7 @@ The Volto Button Block allows editors to add a button to a Volto page.
 
 ## Screenshot
 
-![Button-Block](https://github.com/kitconcept/volto-button-block/raw/master/screenshot.jpg)
+![Button-Block](https://github.com/kitconcept/volto-button-block/raw/master/screenshot.png)
 
 ## Screencast
 
