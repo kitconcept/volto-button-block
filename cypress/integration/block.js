@@ -18,4 +18,4 @@ context('Block Acceptance Tests', () => {
     cy.get('.button.buttonBlock').click();
     cy.get('#toolbar-save').click();
   });
-}
+});
