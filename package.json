@@ -10,6 +10,8 @@
     "plone",
     "react"
   ],
+  "author": "kitconcept GmbH",
+  "homepage": "https://github.com/kitconcept/volto-button-block#readme",
   "publishConfig": {
     "access": "public"
   },
