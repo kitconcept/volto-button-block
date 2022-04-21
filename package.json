@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-button-block",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.0",
   "description": "volto-button-block: Volto add-on that provides a configurable button as a block.",
   "main": "src/index.js",
   "license": "MIT",
@@ -10,6 +10,9 @@
     "plone",
     "react"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
     "cypress:open": "NODE_ENV=production ../../../node_modules/cypress/bin/cypress open",
