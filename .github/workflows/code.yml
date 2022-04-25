@@ -1,7 +1,8 @@
 name: Code analysis checks
 on: [push]
 jobs:
-  build:
+  codeanalysis:
+    name: Code Analysis
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -46,7 +47,7 @@ jobs:
 
       # ESlint
       - name: ESlint
-        run: cd addon-testing-project && yarn && yarn lint:ci
+        run: cd addon-testing-project && yarn && yarn lint
 
       # Stylelint
       - name: Stylelint

@@ -94,8 +94,10 @@
       ]
     }
   },
-  "dependencies": {
-    "@plone/scripts": "*",
+  "devDependencies": {
     "release-it": "^14.14.2"
+  },
+  "dependencies": {
+    "@plone/scripts": "*"
   }
 }
