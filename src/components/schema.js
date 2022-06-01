@@ -80,7 +80,7 @@ export const ButtonSchema = (props) => {
   };
 };
 
-export const stylingSchemaButton = ({ schema, formData, intl }) => {
+export const ButtonStylingSchema = ({ schema, formData, intl }) => {
   schema.fieldsets[0].fields.push('backgroundColor');
   schema.fieldsets[0].fields.unshift('innerAlign');
   schema.properties.innerAlign = {

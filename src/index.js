@@ -4,9 +4,8 @@ import circleMenuSVG from '@plone/volto/icons/circle-menu.svg';
 import './theme/main.less';
 
 const applyConfig = (config) => {
-  config.blocks.blocksConfig.buttonBlock = {
-    availableColors: ['#ebebeb', '#023d6b', '#ddeeff', '#eb5f73', '#b9d25f'],
-    id: 'buttonBlock',
+  config.blocks.blocksConfig.button = {
+    id: 'button',
     title: 'Button',
     icon: circleMenuSVG,
     group: 'common',
