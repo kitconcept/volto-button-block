@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
 
-const View = ({ data, isEditMode }) => {
+const View = ({ data, isEditMode, className }) => {
   const [hasLink, setHasLink] = React.useState(false);
 
   React.useEffect(() => {
@@ -39,7 +39,15 @@ const View = ({ data, isEditMode }) => {
     <Button className="noLink">{data.title}</Button>
   );
 
-  return <div className={cx(`block button align ${data?.align}`)}>{link}</div>;
+  return (
+    <div className={cx('block', className)}>
+      <div className="button container">
+        <div className={cx(`block button align ${data?.inneralign}`)}>
+          {link}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default View;

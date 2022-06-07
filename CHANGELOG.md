@@ -6,6 +6,8 @@
 
 ### Feature
 
+- Making it to incorporate the new style wrapper @iFlameing
+
 ### Bugfix
 
 ### Internal
