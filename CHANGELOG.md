@@ -2,15 +2,9 @@
 
 ## 1.0.1 (unreleased)
 
-### Breaking
-
 ### Feature
 
 - Making it to incorporate the new style wrapper @iFlameing
-
-### Bugfix
-
-### Internal
 
 ## 1.0.0 (2022-04-22)
 
