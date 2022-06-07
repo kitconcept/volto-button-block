@@ -17,6 +17,11 @@ msgstr ""
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
 #: components/schema
+# defaultMessage: Inner Alignment
+msgid " Inner Alignment"
+msgstr ""
+
+#: components/schema
 # defaultMessage: Alignment
 msgid "Alignment"
 msgstr "Ausrichtung"
@@ -27,12 +32,37 @@ msgstr "Ausrichtung"
 msgid "Button Block"
 msgstr "Knopf Block"
 
+#: components/Widgets/InnerAlign
+# defaultMessage: Center
+msgid "Center"
+msgstr ""
+
+#: components/Widgets/InnerAlign
+# defaultMessage: Full
+msgid "Full"
+msgstr ""
+
+#: components/Widgets/InnerAlign
+# defaultMessage: Left
+msgid "Left"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Link
 msgid "Link"
 msgstr "Verlinkung"
 
+#: components/Widgets/InnerAlign
+# defaultMessage: Right
+msgid "Right"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Title
 msgid "Title"
 msgstr "Titel"
+
+#: components/Widgets/InnerAlign
+# defaultMessage: Wide
+msgid "Wide"
+msgstr ""

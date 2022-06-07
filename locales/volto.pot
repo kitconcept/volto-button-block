@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-03-28T12:59:20.790Z\n"
+"POT-Creation-Date: 2022-06-07T15:59:54.410Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,11 @@ msgstr ""
 "Domain: volto\n"
 
 #: components/schema
+# defaultMessage: Inner Alignment
+msgid " Inner Alignment"
+msgstr ""
+
+#: components/schema
 # defaultMessage: Alignment
 msgid "Alignment"
 msgstr ""
@@ -24,12 +29,37 @@ msgstr ""
 msgid "Button Block"
 msgstr ""
 
+#: components/Widgets/InnerAlign
+# defaultMessage: Center
+msgid "Center"
+msgstr ""
+
+#: components/Widgets/InnerAlign
+# defaultMessage: Full
+msgid "Full"
+msgstr ""
+
+#: components/Widgets/InnerAlign
+# defaultMessage: Left
+msgid "Left"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Link
 msgid "Link"
 msgstr ""
 
+#: components/Widgets/InnerAlign
+# defaultMessage: Right
+msgid "Right"
+msgstr ""
+
 #: components/schema
 # defaultMessage: Title
 msgid "Title"
+msgstr ""
+
+#: components/Widgets/InnerAlign
+# defaultMessage: Wide
+msgid "Wide"
 msgstr ""
