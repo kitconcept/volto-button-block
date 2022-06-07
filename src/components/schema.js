@@ -50,7 +50,7 @@ export const ButtonSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['title', 'href', 'align'],
+        fields: ['title', 'href', 'inneralign'],
       },
     ],
 
@@ -65,14 +65,9 @@ export const ButtonSchema = (props) => {
         selectedItemAttrs: ['Title', 'Description', 'hasPreviewImage'],
         allowExternals: true,
       },
-      align: {
-        title: props.intl.formatMessage(messages.Align),
-        choices: [
-          ['left', `${intl.formatMessage(messages.left)}`],
-          ['right', `${intl.formatMessage(messages.right)}`],
-          ['center', `${intl.formatMessage(messages.center)}`],
-          ['full', `${intl.formatMessage(messages.layoutContainer)}`],
-        ],
+      inneralign: {
+        title: props.intl.formatMessage(messages.innerAlign),
+        widget: 'inner_align',
         default: 'left',
       },
     },
@@ -82,10 +77,10 @@ export const ButtonSchema = (props) => {
 
 export const ButtonStylingSchema = ({ schema, formData, intl }) => {
   schema.fieldsets[0].fields.push('backgroundColor');
-  schema.fieldsets[0].fields.unshift('innerAlign');
-  schema.properties.innerAlign = {
+  schema.fieldsets[0].fields.unshift('buttonAlign');
+  schema.properties.buttonAlign = {
     widget: 'align',
-    title: intl.formatMessage(messages.innerAlign),
+    title: intl.formatMessage(messages.Align),
     actions: ['center', 'wide'],
   };
   pull(schema.fieldsets[0].fields, 'align');
