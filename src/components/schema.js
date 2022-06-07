@@ -45,7 +45,6 @@ export const ButtonSchema = (props) => {
 
   return {
     title: intl.formatMessage(messages.ButtonBlock),
-    block: 'buttonBlock',
     fieldsets: [
       {
         id: 'default',
