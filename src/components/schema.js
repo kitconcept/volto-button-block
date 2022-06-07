@@ -18,22 +18,6 @@ const messages = defineMessages({
     id: 'Alignment',
     defaultMessage: 'Alignment',
   },
-  layoutContainer: {
-    id: '100%',
-    defaultMessage: '100%',
-  },
-  left: {
-    id: 'Left',
-    defaultMessage: 'Left',
-  },
-  right: {
-    id: 'Right',
-    defaultMessage: 'Right',
-  },
-  center: {
-    id: 'Center',
-    defaultMessage: 'Center',
-  },
   innerAlign: {
     id: ' Inner Alignment',
     defaultMessage: 'Inner Alignment',
