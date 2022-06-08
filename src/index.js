@@ -6,8 +6,8 @@ import './theme/main.less';
 
 const applyConfig = (config) => {
   config.widgets.widget.inner_align = InnerAlignBlock;
-  config.blocks.blocksConfig._button = {
-    id: '_button',
+  config.blocks.blocksConfig.__button = {
+    id: '__button',
     title: 'Button',
     icon: circleMenuSVG,
     group: 'common',

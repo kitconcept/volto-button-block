@@ -55,7 +55,7 @@ const View = ({ data, isEditMode, className }) => {
   );
 
   return (
-    <div className={cx('block _button', className)}>
+    <div className={cx('block __button', className)}>
       <div className="button container">
         <div className={cx(`align ${data?.inneralign}`)}>{link}</div>
       </div>
