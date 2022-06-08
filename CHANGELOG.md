@@ -8,6 +8,8 @@
 
 ### Bugfix
 
+- Fix CSS and block name @sneridagh
+
 ### Internal
 
 ## 1.1.0 (2022-06-07)
