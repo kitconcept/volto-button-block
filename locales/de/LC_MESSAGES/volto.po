@@ -32,6 +32,11 @@ msgstr "Ausrichtung"
 msgid "Button Block"
 msgstr "Knopf Block"
 
+#: components/View
+# defaultMessage: Button text
+msgid "Button text"
+msgstr ""
+
 #: components/Widgets/InnerAlign
 # defaultMessage: Center
 msgid "Center"

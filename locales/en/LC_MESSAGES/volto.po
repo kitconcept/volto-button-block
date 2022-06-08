@@ -27,6 +27,11 @@ msgstr ""
 msgid "Button Block"
 msgstr ""
 
+#: components/View
+# defaultMessage: Button text
+msgid "Button text"
+msgstr ""
+
 #: components/Widgets/InnerAlign
 # defaultMessage: Center
 msgid "Center"
