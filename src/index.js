@@ -6,8 +6,8 @@ import './theme/main.less';
 
 const applyConfig = (config) => {
   config.widgets.widget.inner_align = InnerAlignBlock;
-  config.blocks.blocksConfig.button = {
-    id: 'button',
+  config.blocks.blocksConfig._button = {
+    id: '_button',
     title: 'Button',
     icon: circleMenuSVG,
     group: 'common',
@@ -16,10 +16,6 @@ const applyConfig = (config) => {
     restricted: false,
     mostUsed: true,
     sidebarTab: 1,
-    security: {
-      addPermission: [],
-      view: [],
-    },
   };
   return config;
 };

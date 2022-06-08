@@ -1,5 +1,4 @@
 import { defineMessages } from 'react-intl';
-import { pull } from 'lodash';
 
 const messages = defineMessages({
   ButtonBlock: {
@@ -56,16 +55,4 @@ export const ButtonSchema = (props) => {
     },
     required: [],
   };
-};
-
-export const ButtonStylingSchema = ({ schema, formData, intl }) => {
-  schema.fieldsets[0].fields.push('backgroundColor');
-  schema.fieldsets[0].fields.unshift('buttonAlign');
-  schema.properties.buttonAlign = {
-    widget: 'align',
-    title: intl.formatMessage(messages.Align),
-    actions: ['center', 'wide'],
-  };
-  pull(schema.fieldsets[0].fields, 'align');
-  return schema;
 };
