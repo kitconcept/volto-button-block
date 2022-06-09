@@ -32,7 +32,7 @@ const messages = defineMessages({
   },
 });
 
-const InnerAlignBlock = (props) => {
+const AlignWidget = (props) => {
   const intl = useIntl();
 
   const {
@@ -60,7 +60,7 @@ const InnerAlignBlock = (props) => {
     <FormFieldWrapper {...props} className="align-widget">
       <div className="align-buttons">
         {actions.map((action) => (
-          <Button.Group>
+          <Button.Group key={action}>
             <Button
               icon
               basic
@@ -77,4 +77,4 @@ const InnerAlignBlock = (props) => {
   );
 };
 
-export default InnerAlignBlock;
+export default AlignWidget;
