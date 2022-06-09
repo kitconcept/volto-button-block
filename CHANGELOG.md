@@ -2,9 +2,9 @@
 
 ## 1.1.1 (unreleased)
 
-### Bugfix
+### Breaking
 
-- Fix CSS and block name @sneridagh
+- Fix CSS and block name now is `__button` to avoid semanticUI CSS clashes @sneridagh
 - Rename widget internally @sneridagh
 
 ## 1.1.0 (2022-06-07)
