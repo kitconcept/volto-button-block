@@ -2,15 +2,10 @@
 
 ## 1.1.1 (unreleased)
 
-### Breaking
-
-### Feature
-
 ### Bugfix
 
 - Fix CSS and block name @sneridagh
-
-### Internal
+- Rename widget internally @sneridagh
 
 ## 1.1.0 (2022-06-07)
 
@@ -20,13 +15,9 @@
 
 ## 1.0.0 (2022-04-22)
 
-### Breaking
-
 ### Feature
 
-### Bugfix
-
-### Internal
+- Real initial release @sneridagh
 
 ## 1.0.0-alpha.0 (2022-04-21)
 
