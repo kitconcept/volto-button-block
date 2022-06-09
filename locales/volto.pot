@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-06-08T09:05:21.558Z\n"
+"POT-Creation-Date: 2022-06-09T08:40:25.732Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -34,17 +34,17 @@ msgstr ""
 msgid "Button text"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Center
 msgid "Center"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Full
 msgid "Full"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Left
 msgid "Left"
 msgstr ""
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Right
 msgid "Right"
 msgstr ""
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Wide
 msgid "Wide"
 msgstr ""

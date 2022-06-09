@@ -32,17 +32,17 @@ msgstr ""
 msgid "Button text"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Center
 msgid "Center"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Full
 msgid "Full"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Left
 msgid "Left"
 msgstr ""
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Right
 msgid "Right"
 msgstr ""
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: components/Widgets/InnerAlign
+#: components/Widgets/AlignWidget
 # defaultMessage: Wide
 msgid "Wide"
 msgstr ""
