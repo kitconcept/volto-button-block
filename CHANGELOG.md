@@ -10,6 +10,8 @@
 
 ### Internal
 
+- Update to use latest `@plone/scripts` @sneridagh
+
 ## 2.0.0 (2022-06-09)
 
 ### Breaking
