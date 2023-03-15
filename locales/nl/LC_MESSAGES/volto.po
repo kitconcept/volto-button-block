@@ -27,9 +27,9 @@ msgstr "Uitlijning"
 
 #: components/Data
 #: components/schema
-# defaultMessage: Button Block
+# defaultMessage: Button
 msgid "Button Block"
-msgstr "Knop Blok"
+msgstr "Knop"
 
 #: components/View
 # defaultMessage: Button text

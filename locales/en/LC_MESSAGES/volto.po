@@ -23,7 +23,7 @@ msgstr ""
 
 #: components/Data
 #: components/schema
-# defaultMessage: Button Block
+# defaultMessage: Button
 msgid "Button Block"
 msgstr ""
 
