@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Button Block",
+    "defaultMessage": "Button Block"
+  },
+  {
+    "id": "Title",
+    "defaultMessage": "Title"
+  },
+  {
+    "id": "Link",
+    "defaultMessage": "Link"
+  },
+  {
+    "id": "Alignment",
+    "defaultMessage": "Alignment"
+  },
+  {
+    "id": " Inner Alignment",
+    "defaultMessage": "Inner Alignment"
+  }
+]

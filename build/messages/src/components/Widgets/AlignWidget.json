@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Left",
+    "defaultMessage": "Left"
+  },
+  {
+    "id": "Right",
+    "defaultMessage": "Right"
+  },
+  {
+    "id": "Center",
+    "defaultMessage": "Center"
+  },
+  {
+    "id": "Wide",
+    "defaultMessage": "Wide"
+  },
+  {
+    "id": "Full",
+    "defaultMessage": "Full"
+  }
+]
