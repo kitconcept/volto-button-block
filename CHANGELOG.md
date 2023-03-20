@@ -8,6 +8,14 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.0 (2023-03-20)
+
+### Feature
+
+- Remove 'block' suffix @danalvrz [#5](https://github.com/kitconcept/volto-export/pull/5)
+- Add dockerized testbed support @sneridagh [#6](https://github.com/kitconcept/volto-export/pull/6)
+
+
 ## 2.0.0 (2022-06-09)
 
 ### Breaking
