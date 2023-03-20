@@ -28,9 +28,9 @@ msgstr "Ausrichtung"
 
 #: components/Data
 #: components/schema
-# defaultMessage: Button Block
+# defaultMessage: Button
 msgid "Button Block"
-msgstr "Knopf Block"
+msgstr "Knopf"
 
 #: components/View
 # defaultMessage: Button text

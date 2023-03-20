@@ -3,7 +3,7 @@ import { defineMessages } from 'react-intl';
 const messages = defineMessages({
   ButtonBlock: {
     id: 'Button Block',
-    defaultMessage: 'Button Block',
+    defaultMessage: 'Button',
   },
   ButtonTitle: {
     id: 'Title',

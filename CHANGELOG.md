@@ -7,6 +7,7 @@
 ### Feature
 
 ### Bugfix
+- Remove "block" from messages @danalvrz
 
 ### Internal
 
