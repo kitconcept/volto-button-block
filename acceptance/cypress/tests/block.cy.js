@@ -13,7 +13,7 @@ context('Block Acceptance Tests', () => {
 
   it('As editor I can add a Button block', () => {
     cy.visit('/document/edit');
-    cy.get('.block.inner.text .public-DraftEditor-content').click();
+    cy.getSlate().click();
     cy.get('.button .block-add-button').click({ force: true });
     cy.get('.blocks-chooser .mostUsed').findByText('Button').click();
     cy.get('#toolbar-save').click();
