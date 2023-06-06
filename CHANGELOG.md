@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.2.0 (2023-06-06)
+
+### Feature
+
+- Add Brazilian Portuguese translation. @ericof [#7](https://github.com/kitconcept/volto-export/pull/7)
+
+
 ## 2.1.0 (2023-03-20)
 
 ### Feature
