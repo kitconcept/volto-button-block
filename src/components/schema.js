@@ -21,6 +21,10 @@ const messages = defineMessages({
     id: ' Inner Alignment',
     defaultMessage: 'Inner Alignment',
   },
+  openLinkInNewTab: {
+    id: 'Open in a new tab',
+    defaultMessage: 'Open in a new tab',
+  },
 });
 
 export const ButtonSchema = (props) => {
@@ -33,6 +37,11 @@ export const ButtonSchema = (props) => {
         id: 'default',
         title: 'Default',
         fields: ['title', 'href', 'inneralign'],
+      },
+      {
+        id: 'link_settings',
+        title: 'Link settings',
+        fields: ['openLinkInNewTab'],
       },
     ],
 
@@ -51,6 +60,10 @@ export const ButtonSchema = (props) => {
         title: props.intl.formatMessage(messages.innerAlign),
         widget: 'inner_align',
         default: 'left',
+      },
+      openLinkInNewTab: {
+        title: intl.formatMessage(messages.openLinkInNewTab),
+        type: 'boolean',
       },
     },
     required: [],
