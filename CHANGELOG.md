@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.3.0 (2023-06-23)
+
+### Feature
+
+- Add new Feature Button opens in new window @iRohitSingh [#9](https://github.com/kitconcept/volto-export/pull/9)
+
+
 ## 2.2.0 (2023-06-06)
 
 ### Feature

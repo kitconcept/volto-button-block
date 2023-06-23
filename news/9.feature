@@ -1,1 +1,0 @@
-Add new Feature Button opens in new window @iRohitSingh
