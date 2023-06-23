@@ -36,12 +36,7 @@ export const ButtonSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['title', 'href', 'inneralign'],
-      },
-      {
-        id: 'link_settings',
-        title: 'Link settings',
-        fields: ['openLinkInNewTab'],
+        fields: ['title', 'href', 'openLinkInNewTab', 'inneralign'],
       },
     ],
 
