@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 import cx from 'classnames';
 import { ConditionalLink } from '@plone/volto/components';
-import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -30,23 +29,16 @@ const View = ({ data, isEditMode, className }) => {
   }, [data.href]);
 
   let link = hasLink ? (
-    data.href.length > 0 && isInternalURL(data.href[0]['@id']) ? (
+    data.href.length > 0 && (
       <ConditionalLink
-        to={data.href.length > 0 ? flattenToAppURL(data.href[0]['@id']) : ''}
+        to={data.href[0]?.['@id']}
         condition={!isEditMode}
+        openLinkInNewTab={data.openLinkInNewTab}
       >
         <Button className={(cx('button'), data.align)}>
           {data.title || intl.formatMessage(messages.ButtonText)}
         </Button>
       </ConditionalLink>
-    ) : (
-      data.href.length > 0 && (
-        <a href={flattenToAppURL(data.href[0]['@id'])}>
-          <Button className={(cx('button'), data.align)}>
-            {data.title || intl.formatMessage(messages.ButtonText)}
-          </Button>
-        </a>
-      )
     )
   ) : (
     <Button className="noLink">
