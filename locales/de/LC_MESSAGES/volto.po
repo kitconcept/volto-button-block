@@ -19,7 +19,7 @@ msgstr ""
 #: components/schema
 # defaultMessage: Inner Alignment
 msgid " Inner Alignment"
-msgstr ""
+msgstr "Ausrichtung"
 
 #: components/schema
 # defaultMessage: Alignment
@@ -56,6 +56,11 @@ msgstr ""
 # defaultMessage: Link
 msgid "Link"
 msgstr "Verlinkung"
+
+#: components/schema
+# defaultMessage: Open in a new tab
+msgid "Open in a new tab"
+msgstr ""
 
 #: components/Widgets/AlignWidget
 # defaultMessage: Right

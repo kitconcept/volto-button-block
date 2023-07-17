@@ -56,6 +56,11 @@ msgstr ""
 msgid "Link"
 msgstr "Link"
 
+#: components/schema
+# defaultMessage: Open in a new tab
+msgid "Open in a new tab"
+msgstr ""
+
 #: components/Widgets/AlignWidget
 # defaultMessage: Right
 msgid "Right"
