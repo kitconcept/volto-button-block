@@ -19,7 +19,7 @@ msgstr ""
 #: components/schema
 # defaultMessage: Inner Alignment
 msgid " Inner Alignment"
-msgstr ""
+msgstr "Ausrichtung"
 
 #: components/schema
 # defaultMessage: Alignment
