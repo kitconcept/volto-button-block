@@ -8,6 +8,14 @@
 
 <!-- towncrier release notes start -->
 
+## 2.3.1 (2023-07-21)
+
+### Bugfix
+
+- Fix DE translation of Inner Alignment @iRohitSingh. [#1](https://github.com/kitconcept/volto-export/pull/1)
+- Add missing translation. @danalvrz [#12](https://github.com/kitconcept/volto-export/pull/12)
+
+
 ## 2.3.0 (2023-06-23)
 
 ### Feature
