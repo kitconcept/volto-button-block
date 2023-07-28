@@ -24,8 +24,8 @@ YELLOW=`tput setaf 3`
 PLONE_VERSION=6
 VOLTO_VERSION=17.0.0-alpha.1
 
-ADDON_NAME='@kitconcept/volto-image-block'
-ADDON_PATH='volto-image-block'
+ADDON_NAME='@kitconcept/volto-button-block'
+ADDON_PATH='volto-button-block'
 DEV_COMPOSE=dockerfiles/docker-compose.yml
 ACCEPTANCE_COMPOSE=acceptance/docker-compose.yml
 CMD=CURRENT_DIR=${CURRENT_DIR} ADDON_NAME=${ADDON_NAME} ADDON_PATH=${ADDON_PATH} VOLTO_VERSION=${VOLTO_VERSION} PLONE_VERSION=${PLONE_VERSION} docker compose
