@@ -11,7 +11,8 @@ const messages = defineMessages({
 });
 
 const ButtonData = (props) => {
-  const { data, block, onChangeBlock, schemaEnhancer } = props;
+  const { data, block, onChangeBlock, schemaEnhancer, navRoot, contentType } =
+    props;
   const intl = useIntl();
   const schema = schemaEnhancer
     ? schemaEnhancer(ButtonSchema({ ...props, intl }), props)
@@ -27,9 +28,11 @@ const ButtonData = (props) => {
           [id]: value,
         });
       }}
+      onChangeBlock={onChangeBlock}
       formData={data}
-      fieldIndex={data.index}
       block={block}
+      navRoot={navRoot}
+      contentType={contentType}
     />
   );
 };
