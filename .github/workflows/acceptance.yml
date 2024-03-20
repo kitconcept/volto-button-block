@@ -55,10 +55,10 @@ jobs:
         working-directory: core/packages/volto
         run: make cypress-install
 
-        run: nohup make start-test-acceptance-server-ci &
-        run: nohup make start-test-acceptance-frontend &
-        run: pnpm --filter @plone/volto exec wait-on --httpTimeout 20000 http-get://localhost:55001/plone http://localhost:3000
-        run: make test-acceptance-headless
+      - run: nohup make start-test-acceptance-server-ci &
+      - run: nohup make start-test-acceptance-frontend &
+      - run: pnpm --filter @plone/volto exec wait-on --httpTimeout 20000 http-get://localhost:55001/plone http://localhost:3000
+      - run: make test-acceptance-headless
 
       # - name: "Cypress: Acceptance tests"
       #   uses: cypress-io/github-action@v6
