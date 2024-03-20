@@ -38,6 +38,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: pnpm i
+      - run: make install
+      - run: pnpm i
 
       - name: Linting
         run: make lint

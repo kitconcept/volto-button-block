@@ -49,6 +49,8 @@ jobs:
           key: binary-${{ matrix.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}
 
       - run: pnpm i
+      - run: make install
+      - run: pnpm i
 
       - name: "Cypress: Acceptance tests"
         uses: cypress-io/github-action@v5
