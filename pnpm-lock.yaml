@@ -24,9 +24,6 @@ importers:
       mrs-developer:
         specifier: ^2.2.0
         version: 2.2.0
-      release-it:
-        specifier: ^17.1.1
-        version: 17.1.1(typescript@5.4.2)
 
   core/packages/blocks:
     dependencies:
