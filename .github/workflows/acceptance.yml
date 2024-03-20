@@ -62,9 +62,10 @@ jobs:
           CYPRESS_RETRIES: 2
         with:
           working-directory: core/packages/volto
-          config-file: ../../../cypress.config.js
+          project: ../../../.
+          # config-file: ../../../cypress.config.js
           browser: chrome
-          spec: ../../../cypress/tests/**/*.{js,jsx,ts,tsx}
+          spec: cypress/tests/**/*.{js,jsx,ts,tsx}
           install: false
           start: |
             make start-test-acceptance-server
