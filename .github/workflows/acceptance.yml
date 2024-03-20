@@ -48,6 +48,8 @@ jobs:
           path: ~/.cache/Cypress
           key: binary-${{ matrix.node-version }}-${{ hashFiles('pnpm-lock.yaml') }}
 
+      - run: pnpm i
+
       - name: "Cypress: Acceptance tests"
         uses: cypress-io/github-action@v5
         env:

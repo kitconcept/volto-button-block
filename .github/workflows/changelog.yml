@@ -27,7 +27,8 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm i
+
 
       - name: Check for presence of a Change Log fragment (only pull requests)
         run: |
