@@ -58,7 +58,6 @@ jobs:
         with:
           parallel: false
           browser: chrome
-          working-directory: acceptance
           spec: cypress/tests/*.js
           install: false
           start: |
