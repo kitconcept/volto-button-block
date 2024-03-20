@@ -56,7 +56,6 @@ jobs:
           BABEL_ENV: production
           CYPRESS_RETRIES: 2
         with:
-          parallel: false
           browser: chrome
           spec: cypress/tests/*.js
           install: false
