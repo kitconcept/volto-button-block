@@ -32,11 +32,6 @@ msgstr "Alinhamento"
 msgid "Button Block"
 msgstr "Bloco de Botão"
 
-#. Default: "Button text"
-#: components/View
-msgid "Button text"
-msgstr "Texto"
-
 #. Default: "Center"
 #: components/Widgets/AlignWidget
 msgid "Center"

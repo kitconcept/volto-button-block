@@ -22,50 +22,15 @@ RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
 PLONE_VERSION=6
-VOLTO_VERSION=17.0.0-alpha.1
 DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
 DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
 ADDON_NAME='@kitconcept/volto-button-block'
-ADDON_PATH='volto-button-block'
-DEV_COMPOSE=dockerfiles/docker-compose.yml
-ACCEPTANCE_COMPOSE=acceptance/docker-compose.yml
-CMD=CURRENT_DIR=${CURRENT_DIR} ADDON_NAME=${ADDON_NAME} ADDON_PATH=${ADDON_PATH} VOLTO_VERSION=${VOLTO_VERSION} PLONE_VERSION=${PLONE_VERSION} docker compose
-DOCKER_COMPOSE=${CMD} -p ${ADDON_PATH} -f ${DEV_COMPOSE}
-ACCEPTANCE=${CMD} -p ${ADDON_PATH}-acceptance -f ${ACCEPTANCE_COMPOSE}
 
-.PHONY: build-backend
-build-backend: ## Build
-	@echo "$(GREEN)==> Build Backend Container $(RESET)"
-	${DOCKER_COMPOSE} build backend
-
-.PHONY: start-backend
-start-backend: ## Starts Docker backend
-	@echo "$(GREEN)==> Start Docker-based Plone Backend $(RESET)"
-	${DOCKER_COMPOSE} up backend -d
-
-.PHONY: stop-backend
-stop-backend: ## Stop Docker backend
-	@echo "$(GREEN)==> Stop Docker-based Plone Backend $(RESET)"
-	${DOCKER_COMPOSE} stop backend
-
-.PHONY: build-addon
-build-addon: ## Build Addon dev
-	@echo "$(GREEN)==> Build Addon development container $(RESET)"
-	${DOCKER_COMPOSE} build addon-dev
-
-.PHONY: start-dev
-start-dev: ## Starts Dev container
-	@echo "$(GREEN)==> Start Addon Development container $(RESET)"
-	${DOCKER_COMPOSE} up addon-dev
-
-.PHONY: dev
-dev: ## Develop the addon
-	@echo "$(GREEN)==> Start Development Environment $(RESET)"
-	make build-backend
-	make start-backend
-	make build-addon
-	make start-dev
+.PHONY: install
+install: ## Build
+	@echo "$(GREEN)==> Installs the dev environment $(RESET)"
+	pnpm exec missdev --no-config --fetch-https
 
 .PHONY: help
 help:		## Show this help.
@@ -78,23 +43,23 @@ i18n: ## Sync i18n
 
 .PHONY: format
 format: ## Format codebase
-	${DOCKER_COMPOSE} run addon-dev lint:fix
-	${DOCKER_COMPOSE} run addon-dev prettier:fix
-	${DOCKER_COMPOSE} run addon-dev stylelint:fix
+	pnpm lint:fix
+	pnpm prettier:fix
+	pnpm stylelint:fix
 
 .PHONY: lint
 lint: ## Lint Codebase
-	${DOCKER_COMPOSE} run addon-dev lint
-	${DOCKER_COMPOSE} run addon-dev prettier
-	${DOCKER_COMPOSE} run addon-dev stylelint --allow-empty-input
+	pnpm lint
+	pnpm prettier
+	pnpm stylelint --allow-empty-input
 
 .PHONY: test
 test: ## Run unit tests
-	${DOCKER_COMPOSE} run addon-dev test --watchAll
+	pnpm test
 
 .PHONY: test-ci
 test-ci: ## Run unit tests in CI
-	${DOCKER_COMPOSE} run -e CI=1 addon-dev test
+	CI=1 pnpm test
 
 .PHONY: start-backend-docker
 start-backend-docker:		## Starts a Docker-based backend

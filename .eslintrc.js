@@ -1,5 +1,5 @@
 module.exports = {
-  extends: './dev/core/packages/volto/.eslintrc',
+  extends: './core/packages/volto/.eslintrc',
   rules: {
     'import/no-unresolved': 1,
   },

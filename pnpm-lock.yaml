@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@kitconcept/volto-button-block':
         specifier: workspace:*
-        version: link:..
+        version: link:packages/volto-button-block
       '@plone/registry':
         specifier: workspace:*
         version: link:core/packages/registry
@@ -1282,6 +1282,34 @@ importers:
         specifier: 5.0.8
         version: 5.0.8(cypress@13.6.6)
     devDependencies:
+      release-it:
+        specifier: ^17.1.1
+        version: 17.1.1(typescript@5.4.2)
+
+  packages/volto-button-block:
+    dependencies:
+      '@plone/components':
+        specifier: 1.7.0
+        version: 1.7.0(react-dom@18.2.0)(react@18.2.0)
+      classnames:
+        specifier: 2.2.6
+        version: 2.2.6
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-intl:
+        specifier: 3.8.0
+        version: 3.8.0(react@18.2.0)
+    devDependencies:
+      '@plone/scripts':
+        specifier: ^3.6.1
+        version: link:../../core/packages/scripts
+      eslint:
+        specifier: 8.57.0
+        version: 8.57.0
       release-it:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.4.2)
@@ -6059,6 +6087,25 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
+
+  /@plone/components@1.7.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-T/GOFwKEhxrjp2S0sqRgTz7ZN8TcxvvPKKq7af2vARpEGWW8HszCX9CTDo0t3decSal0NqWqHiFbY2q6xbvrNA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+    dependencies:
+      '@react-aria/utils': 3.23.2(react@18.2.0)
+      '@react-spectrum/utils': 3.11.5(react@18.2.0)
+      classnames: 2.5.1
+      clsx: 2.1.0
+      lodash: 4.17.21
+      react: 18.2.0
+      react-aria-components: 1.1.1(react-dom@18.2.0)(react@18.2.0)
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /@pmmmwh/react-refresh-webpack-plugin@0.4.3(react-refresh@0.9.0)(webpack-dev-server@4.11.1)(webpack@5.76.1):
     resolution: {integrity: sha512-br5Qwvh8D2OQqSXpd1g/xqXKnK0r+Jz6qVKBbWmpUcrbGOxUrf39V5oZ1876084CGn18uMdR5uvPqBv9UqtBjQ==}
@@ -12084,7 +12131,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.24.1(@babel/core@7.24.1)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.1.6(lightningcss@1.24.1)
+      vite: 5.1.6(@types/node@20.11.30)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -12108,7 +12155,7 @@ packages:
       strip-literal: 2.0.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.2.0
-      vitest: 1.4.0(jsdom@22.1.0)(lightningcss@1.24.1)
+      vitest: 1.4.0(jsdom@21.1.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -14742,6 +14789,10 @@ packages:
 
   /classnames@2.2.6:
     resolution: {integrity: sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==}
+    dev: false
+
+  /classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
     dev: false
 
   /clean-css@4.2.4:

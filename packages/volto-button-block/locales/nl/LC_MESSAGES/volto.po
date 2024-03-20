@@ -1,15 +1,19 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PlonenPOT-Creation-Date: 2017-04-27T19:30:59.079Z\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language: \n"
-"Language-Team: \n"
-"Content-Type: \n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"PO-Revision-Date: 2017-02-28 08:52+0100\n"
+"Last-Translator: Dutch <plone-i18n@lists.sf.net>\n"
+"Language: nl\n"
+"Language-Team: Dutch <plone-i18n@lists.sf.net>\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
+"Preferred-Encodings: utf-8\n"
 
 #. Default: "Inner Alignment"
 #: components/schema
@@ -19,18 +23,13 @@ msgstr ""
 #. Default: "Alignment"
 #: components/schema
 msgid "Alignment"
-msgstr ""
+msgstr "Uitlijning"
 
 #. Default: "Button"
 #: components/Data
 #: components/schema
 msgid "Button Block"
-msgstr ""
-
-#. Default: "Button text"
-#: components/View
-msgid "Button text"
-msgstr ""
+msgstr "Knop"
 
 #. Default: "Center"
 #: components/Widgets/AlignWidget
@@ -50,7 +49,7 @@ msgstr ""
 #. Default: "Link"
 #: components/schema
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #. Default: "Open in a new tab"
 #: components/schema
@@ -65,7 +64,7 @@ msgstr ""
 #. Default: "Title"
 #: components/schema
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #. Default: "Wide"
 #: components/Widgets/AlignWidget
