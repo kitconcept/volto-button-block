@@ -23,6 +23,8 @@ YELLOW=`tput setaf 3`
 
 PLONE_VERSION=6
 VOLTO_VERSION=17.0.0-alpha.1
+DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
+DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
 ADDON_NAME='@kitconcept/volto-button-block'
 ADDON_PATH='volto-button-block'
@@ -72,7 +74,7 @@ help:		## Show this help.
 # Dev Helpers
 .PHONY: i18n
 i18n: ## Sync i18n
-	${DOCKER_COMPOSE} run addon-dev i18n
+	pnpm --filter $(ADDON_NAME) i18n
 
 .PHONY: format
 format: ## Format codebase
@@ -94,37 +96,28 @@ test: ## Run unit tests
 test-ci: ## Run unit tests in CI
 	${DOCKER_COMPOSE} run -e CI=1 addon-dev test
 
+.PHONY: start-backend-docker
+start-backend-docker:		## Starts a Docker-based backend
+	@echo "$(GREEN)==> Start Docker-based Plone Backend$(RESET)"
+	docker run -it --rm --name=backend -p 8080:8080 -e SITE=Plone -e ADDONS='$(KGS)' $(DOCKER_IMAGE)
+
 ## Acceptance
-.PHONY: install-acceptance
-install-acceptance: ## Install Cypress, build containers
-	(cd acceptance && yarn)
-	${ACCEPTANCE} --profile dev --profile prod build
+.PHONY: start-test-acceptance-frontend-dev
+start-test-acceptance-frontend-dev: ## Start acceptance server
+	RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm start
+
+.PHONY: start-test-acceptance-frontend
+start-test-acceptance-frontend: ## Start acceptance server
+	RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm build && yarn start:prod
 
 .PHONY: start-test-acceptance-server
 start-test-acceptance-server: ## Start acceptance server
-	${ACCEPTANCE} --profile dev up -d
-
-.PHONY: start-test-acceptance-server-prod
-start-test-acceptance-server-prod: ## Start acceptance server
-	${ACCEPTANCE} --profile prod up -d
+	docker run -it --rm -p 55001:55001 $(DOCKER_IMAGE_ACCEPTANCE)
 
 .PHONY: test-acceptance
 test-acceptance: ## Start Cypress
-	(cd acceptance && ./node_modules/.bin/cypress open)
+	pnpm --filter @plone/volto exec cypress open --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
 
 .PHONY: test-acceptance-headless
 test-acceptance-headless: ## Run cypress tests in CI
-	(cd acceptance && ./node_modules/.bin/cypress run)
-
-.PHONY: stop-test-acceptance-server
-stop-test-acceptance-server: ## Stop acceptance server
-	${ACCEPTANCE} down
-
-.PHONY: status-test-acceptance-server
-status-test-acceptance-server: ## Status of Acceptance Server
-	${ACCEPTANCE} ps
-
-.PHONY: debug-frontend
-debug-frontend:  ## Run bash in the Frontend container
-	${DOCKER_COMPOSE} run --entrypoint bash addon-dev
-
+	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'

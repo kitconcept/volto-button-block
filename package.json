@@ -16,70 +16,32 @@
     "access": "public"
   },
   "scripts": {
-    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
-    "cypress:open": "NODE_ENV=production ../../../node_modules/cypress/bin/cypress open",
-    "cypress:run": "NODE_ENV=test ../../../node_modules/cypress/bin/cypress run",
-    "cypress:start-frontend": "cd ../../../ && RAZZLE_API_PATH=http://localhost:55001/plone yarn start",
-    "ci:test-acceptance-server": "make test-acceptance-server",
-    "cy:test:fixture:setup": "node cypress/support/reset-fixture.js",
-    "cy:test:fixture:teardown": "node cypress/support/reset-fixture.js teardown",
+    "init:quasar": "missdev --no-config --fetch-https",
+    "start": "pnpm build:deps && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
+    "start:prod": "pnpm --filter @plone/volto start:prod",
+    "build": "pnpm build:deps && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build",
+    "build:deps": "pnpm --filter @plone/registry --filter @plone/components build",
+    "i18n": "pnpm --filter addons i18n",
+    "lint": "eslint --max-warnings=0 'addons/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix 'addons/**/*.{js,jsx,ts,tsx}'",
+    "prettier": "prettier --check 'addons/**/*.{js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write 'addons/**/*.{js,jsx,ts,tsx}' ",
+    "stylelint": "stylelint 'addons/**/*.{css,scss,less}' --allow-empty-input",
+    "stylelint:fix": "stylelint 'addons/**/*.{css,scss,less}' --fix",
     "dry-release": "release-it --dry-run",
     "release": "release-it",
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "useTabs": false,
-    "overrides": [
-      {
-        "files": "*.overrides",
-        "options": {
-          "parser": "less"
-        }
-      }
-    ]
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-idiomatic-order"
-    ],
-    "plugins": [
-      "stylelint-prettier"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.less"
-        ],
-        "customSyntax": "postcss-less"
-      },
-      {
-        "files": [
-          "**/*.overrides"
-        ],
-        "customSyntax": "postcss-less"
-      }
-    ],
-    "rules": {
-      "prettier/prettier": true,
-      "rule-empty-line-before": [
-        "always-multi-line",
-        {
-          "except": [
-            "first-nested"
-          ],
-          "ignore": [
-            "after-comment"
-          ]
-        }
-      ]
-    }
+  "dependencies": {
+    "@plone/volto": "workspace:*",
+    "@plone/registry": "workspace:*",
+    "@kitconcept/volto-button-block": "workspace:*"
   },
   "devDependencies": {
-    "@plone/scripts": "^2.3.0",
-    "release-it": "^15.6.0"
+    "@plone/scripts": "^3.6.1",
+    "mrs-developer": "^2.2.0",
+    "release-it": "^17.1.1"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "pnpm@8.15.4"
 }
