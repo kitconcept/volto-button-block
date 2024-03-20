@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@kitconcept/volto-button-block':
         specifier: workspace:*
-        version: link:addons/volto-button-block
+        version: link:..
       '@plone/registry':
         specifier: workspace:*
         version: link:core/packages/registry
@@ -24,28 +24,6 @@ importers:
       mrs-developer:
         specifier: ^2.2.0
         version: 2.2.0
-      release-it:
-        specifier: ^17.1.1
-        version: 17.1.1(typescript@5.4.2)
-
-  addons/volto-button-block:
-    dependencies:
-      classnames:
-        specifier: 2.2.6
-        version: 2.2.6
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-intl:
-        specifier: 3.8.0
-        version: 3.8.0(react@18.2.0)
-    devDependencies:
-      '@plone/scripts':
-        specifier: ^3.6.1
-        version: link:../../core/packages/scripts
       release-it:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.4.2)
@@ -1773,7 +1751,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.12.9
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.24.0
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.12.9)
       '@babel/plugin-transform-parameters': 7.24.1(@babel/core@7.12.9)
     dev: true
@@ -11148,13 +11126,13 @@ packages:
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
     dependencies:
       '@types/eslint': 8.56.6
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.5
     dev: true
 
   /@types/eslint@8.56.6:
     resolution: {integrity: sha512-ymwc+qb1XkjT/gfoQwxIeHZ6ixH23A+tCT2ADSA/DPVKzAjwYkTXBMCQ/f6fe4wEa85Lhp26VPeUxI7wMhAi7A==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.5
       '@types/json-schema': 7.0.15
     dev: true
 
@@ -11202,7 +11180,7 @@ packages:
     resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 16.18.91
+      '@types/node': 20.11.30
     dev: true
 
   /@types/graceful-fs@4.1.9:
@@ -11343,7 +11321,7 @@ packages:
   /@types/node-fetch@2.6.11:
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
     dependencies:
-      '@types/node': 18.19.26
+      '@types/node': 20.11.30
       form-data: 4.0.0
     dev: true
 
@@ -11546,7 +11524,7 @@ packages:
     resolution: {integrity: sha512-mj1aH4cj3XUpMEgVpognma5kHVtbm6U6cHZmEFzCRiXPvKkuHrFr3+yXdGLXvfFRBaQIVshPGHI+hGTOJlhS/g==}
     deprecated: This is a stub types definition. testing-library__dom provides its own type definitions, so you do not need this installed.
     dependencies:
-      '@testing-library/dom': 6.16.0
+      '@testing-library/dom': 9.3.4
     dev: true
 
   /@types/testing-library__jest-dom@5.14.9:
@@ -11594,7 +11572,7 @@ packages:
   /@types/webpack-sources@3.2.3:
     resolution: {integrity: sha512-4nZOdMwSPHZ4pTEZzSp0AsTM4K7Qmu40UKW4tJDiOVs20UzYF9l+qUe4s0ftfN0pin06n+5cWWDJXH+sbhAiDw==}
     dependencies:
-      '@types/node': 16.18.91
+      '@types/node': 20.11.30
       '@types/source-list-map': 0.1.6
       source-map: 0.7.4
     dev: true
@@ -11602,7 +11580,7 @@ packages:
   /@types/webpack@4.41.38:
     resolution: {integrity: sha512-oOW7E931XJU1mVfCnxCVgv8GLFL768pDO5u2Gzk82i8yTIgX6i7cntyZOkZYb/JtYM8252SN9bQp9tgkVDSsRw==}
     dependencies:
-      '@types/node': 16.18.91
+      '@types/node': 20.11.30
       '@types/tapable': 1.0.12
       '@types/uglify-js': 3.17.5
       '@types/webpack-sources': 3.2.3
@@ -12106,7 +12084,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.24.1(@babel/core@7.24.1)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.1.6(@types/node@20.11.30)
+      vite: 5.1.6(lightningcss@1.24.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -12130,7 +12108,7 @@ packages:
       strip-literal: 2.0.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.2.0
-      vitest: 1.4.0(jsdom@21.1.2)
+      vitest: 1.4.0(jsdom@22.1.0)(lightningcss@1.24.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -16419,7 +16397,7 @@ packages:
     engines: {node: '>= 4.2.1'}
     hasBin: true
     dependencies:
-      address: 1.1.2
+      address: 1.2.2
       debug: 2.6.9
     transitivePeerDependencies:
       - supports-color
@@ -18470,7 +18448,7 @@ packages:
       vue-template-compiler:
         optional: true
     dependencies:
-      '@babel/code-frame': 7.10.4
+      '@babel/code-frame': 7.24.2
       chalk: 2.4.2
       eslint: 8.49.0
       micromatch: 3.1.10
@@ -18498,7 +18476,7 @@ packages:
       vue-template-compiler:
         optional: true
     dependencies:
-      '@babel/code-frame': 7.10.4
+      '@babel/code-frame': 7.24.2
       chalk: 2.4.2
       eslint: 8.49.0
       micromatch: 3.1.10
