@@ -46,9 +46,11 @@ jobs:
           path: ~/.cache/Cypress
           key: binary-20.x-${{ hashFiles('pnpm-lock.yaml') }}
 
-      - run: pnpm i
-      - run: make install
-      - run: pnpm i
+      - name: Install dependencies
+        run: |
+          pnpm i
+          make install
+          pnpm i
 
       - name: Install Cypress if not in cache
         if: steps.cache-cypress-binary.outputs.cache-hit != 'true'

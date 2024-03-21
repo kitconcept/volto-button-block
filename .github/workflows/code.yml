@@ -37,9 +37,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - run: pnpm i
-      - run: make install
-      - run: pnpm i
+      - name: Install dependencies
+        run: |
+          pnpm i
+          make install
+          pnpm i
 
       - name: Linting
         run: make lint
