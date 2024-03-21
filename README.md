@@ -85,7 +85,7 @@ test-acceptance-headless             Run cypress tests in headless mode for CI
 
 ### Development Environment Setup
 
-Run
+Install package requirements
 
 ```shell
 pnpm i
@@ -97,9 +97,13 @@ pnpm i
 
 Run (in separate terminal sessions)
 
+Start backend server
+
 ```shell
 make start-backend-docker
 ```
+
+Start frontend
 
 ```shell
 pnpm start
@@ -107,7 +111,7 @@ pnpm start
 
 ### Linting
 
-Run
+Run ESlint, Prettier and Stylelint
 
 ```shell
 make lint
@@ -115,7 +119,7 @@ make lint
 
 ### Formatting
 
-Run
+Run ESlint, Prettier and Stylelint in fix mode
 
 ```shell
 make format
@@ -123,7 +127,7 @@ make format
 
 ### i18n
 
-Run
+Extract the i18n messages to locales
 
 ```shell
 make i18n
@@ -131,7 +135,7 @@ make i18n
 
 ### Unit tests
 
-Run
+Run unit tests
 
 ```shell
 make test
@@ -141,15 +145,19 @@ make test
 
 Run (in separate terminal sessions)
 
+Start the frontend in dev mode
+
 ```shell
 make start-test-acceptance-frontend-dev
 ```
+
+Start the backend acceptance server
 
 ```shell
 make start-test-acceptance-server
 ```
 
-Start the Cypress interactive test runner:
+Start the Cypress interactive test runner
 
 ```shell
 make test-acceptance
