@@ -78,7 +78,7 @@ jobs:
           log-output-resume: stderr
           # Eliminates previosuly output stderr log entries from post-run output
 
-          wait-for: 5m
+          wait-for: 10m
 
           log-output: stderr,stdout # same as true
 
