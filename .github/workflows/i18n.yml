@@ -1,11 +1,8 @@
-name: Code analysis checks
+name: i18n
 on: [push]
 jobs:
-  codeanalysis:
+  unit:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
 
     steps:
       - name: Main checkout
@@ -43,5 +40,5 @@ jobs:
           make install
           pnpm i
 
-      - name: Linting
-        run: make lint
+      - name: test i18n command
+        run: make i18n
