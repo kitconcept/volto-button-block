@@ -77,6 +77,10 @@ start-test-acceptance-frontend: ## Start acceptance frontend in prod mode
 start-test-acceptance-server: ## Start acceptance server
 	docker run -it --rm -p 55001:55001 $(DOCKER_IMAGE_ACCEPTANCE)
 
+.PHONY: start-test-acceptance-server-ci
+start-test-acceptance-server-ci: ## Start acceptance server in CI mode (no terminal attached)
+	docker run -i --rm -p 55001:55001 $(DOCKER_IMAGE_ACCEPTANCE)
+
 .PHONY: test-acceptance
 test-acceptance: ## Start Cypress in interactive mode
 	pnpm --filter @plone/volto exec cypress open --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
