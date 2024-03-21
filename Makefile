@@ -1,5 +1,3 @@
-# Yeoman Volto App development
-
 ### Defensive settings for make:
 #     https://tech.davis-hansson.com/p/make/
 SHELL:=bash
@@ -27,16 +25,16 @@ DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
 
 ADDON_NAME='@kitconcept/volto-button-block'
 
-.PHONY: install
-install: ## Build
-	@echo "$(GREEN)==> Installs the dev environment $(RESET)"
-	pnpm exec missdev --no-config --fetch-https
-
 .PHONY: help
-help:		## Show this help.
+help:		## Show this help
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
 # Dev Helpers
+.PHONY: install
+install: ## Installs the dev environment using mrs-developer
+	@echo "$(GREEN)==> Installs the dev environment $(RESET)"
+	pnpm exec missdev --no-config --fetch-https
+
 .PHONY: i18n
 i18n: ## Sync i18n
 	pnpm --filter $(ADDON_NAME) i18n
@@ -62,31 +60,27 @@ test-ci: ## Run unit tests in CI
 	CI=1 RAZZLE_JEST_CONFIG=$(CURRENT_DIR)/jest-addon.config.js pnpm --filter @plone/volto test
 
 .PHONY: start-backend-docker
-start-backend-docker:		## Starts a Docker-based backend
+start-backend-docker:		## Starts a Docker-based backend for developing
 	@echo "$(GREEN)==> Start Docker-based Plone Backend$(RESET)"
 	docker run -it --rm --name=backend -p 8080:8080 -e SITE=Plone -e ADDONS='$(KGS)' $(DOCKER_IMAGE)
 
 ## Acceptance
 .PHONY: start-test-acceptance-frontend-dev
-start-test-acceptance-frontend-dev: ## Start acceptance server
+start-test-acceptance-frontend-dev: ## Start acceptance frontend in dev mode
 	RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm start
 
 .PHONY: start-test-acceptance-frontend
-start-test-acceptance-frontend: ## Start acceptance server
+start-test-acceptance-frontend: ## Start acceptance frontend in prod mode
 	RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm build && pnpm start:prod
 
 .PHONY: start-test-acceptance-server
 start-test-acceptance-server: ## Start acceptance server
 	docker run -it --rm -p 55001:55001 $(DOCKER_IMAGE_ACCEPTANCE)
 
-.PHONY: start-test-acceptance-server-ci
-start-test-acceptance-server-ci: ## Start acceptance server
-	docker run -i --rm -p 55001:55001 $(DOCKER_IMAGE_ACCEPTANCE)
-
 .PHONY: test-acceptance
-test-acceptance: ## Start Cypress
+test-acceptance: ## Start Cypress in interactive mode
 	pnpm --filter @plone/volto exec cypress open --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
 
 .PHONY: test-acceptance-headless
-test-acceptance-headless: ## Run cypress tests in CI
+test-acceptance-headless: ## Run cypress tests in headless mode for CI
 	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
