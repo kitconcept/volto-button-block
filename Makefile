@@ -31,9 +31,9 @@ help:		## Show this help
 
 # Dev Helpers
 .PHONY: install
-install: ## Installs the dev environment using mrs-developer
-	@echo "$(GREEN)==> Installs the dev environment $(RESET)"
-	pnpm exec missdev --no-config --fetch-https
+install: ## Install task, checks if missdev (mrs-developer) is present and runs it
+	pnpm dlx mrs-developer missdev --no-config --fetch-https
+	pnpm i
 
 .PHONY: i18n
 i18n: ## Sync i18n
@@ -83,8 +83,8 @@ start-test-acceptance-server-ci: ## Start acceptance server in CI mode (no termi
 
 .PHONY: test-acceptance
 test-acceptance: ## Start Cypress in interactive mode
-	pnpm --filter @plone/volto exec cypress open --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
+	pnpm exec cypress open --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
 
 .PHONY: test-acceptance-headless
 test-acceptance-headless: ## Run cypress tests in headless mode for CI
-	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
+	pnpm exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'

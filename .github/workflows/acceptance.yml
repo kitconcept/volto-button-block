@@ -1,11 +1,6 @@
 name: Acceptance tests
 on: [push]
 
-env:
-  ADDON_NAME: "@kitconcept/volto-button-block"
-  ADDON_PATH: "volto-button-block"
-  VOLTO_VERSION: "17.0.0-alpha.1"
-
 jobs:
 
   acceptance:
@@ -47,10 +42,7 @@ jobs:
           key: binary-20.x-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: |
-          pnpm i
-          make install
-          pnpm i
+        run: make install
 
       - name: Install Cypress if not in cache
         if: steps.cache-cypress-binary.outputs.cache-hit != 'true'
@@ -90,23 +82,6 @@ jobs:
           # working-directory: backend
 
       - run: make test-acceptance-headless
-
-      # - name: "Cypress: Acceptance tests"
-      #   uses: cypress-io/github-action@v6
-      #   env:
-      #     BABEL_ENV: production
-      #     CYPRESS_RETRIES: 2
-      #   with:
-      #     # working-directory: core/packages/volto
-      #     # project: ../../../.
-      #     # config-file: ../../../cypress.config.js
-      #     browser: chrome
-      #     spec: cypress/tests/**/*.{js,jsx,ts,tsx}
-      #     install: false
-      #     start: |
-      #       make start-test-acceptance-server-ci
-      #       make start-test-acceptance-frontend
-      #     wait-on: 'npx wait-on --httpTimeout 20000 http-get://localhost:55001/plone http://localhost:3000'
 
       # Upload Cypress screenshots
       - uses: actions/upload-artifact@v4

@@ -40,7 +40,6 @@
     "@kitconcept/volto-button-block": "workspace:*"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.6.1",
     "mrs-developer": "^2.2.0"
   },
   "packageManager": "pnpm@8.15.4"
