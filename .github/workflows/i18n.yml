@@ -35,10 +35,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: |
-          pnpm i
-          make install
-          pnpm i
+        run: make install
 
       - name: test i18n command
         run: make i18n
