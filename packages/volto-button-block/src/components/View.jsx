@@ -3,7 +3,6 @@ import { Button } from 'semantic-ui-react';
 import cx from 'classnames';
 import { ConditionalLink, MaybeWrap } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
-import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   ButtonText: {
@@ -21,7 +20,7 @@ const LegacyWrapper = (props) => (
 const View = ({ data, isEditMode, className, blocksConfig }) => {
   const [hasLink, setHasLink] = React.useState(false);
   const intl = useIntl();
-  const isBlockModelv3 = blocksConfig?.__button?.v3;
+  const isBlockModelv3 = blocksConfig?.__button?.blockModel === 3;
 
   React.useEffect(() => {
     if (data.href) {

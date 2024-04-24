@@ -1,5 +1,16 @@
+const fs = require('fs');
+const projectRootPath = __dirname;
+
+const eslintPath = 'core/packages/volto/.eslintrc';
+
+let eslintCoreVoltoConfigFile;
+if (fs.existsSync(`${projectRootPath}/${eslintPath}`))
+  eslintCoreVoltoConfigFile = `${projectRootPath}/${eslintPath}`;
+else if (fs.existsSync(`${projectRootPath}/../../${eslintPath}`))
+  eslintCoreVoltoConfigFile = `${projectRootPath}/../../${eslintPath}`;
+
 module.exports = {
-  extends: './core/packages/volto/.eslintrc',
+  extends: eslintCoreVoltoConfigFile,
   rules: {
     'import/no-unresolved': 1,
   },
