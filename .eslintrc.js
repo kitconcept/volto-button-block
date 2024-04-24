@@ -1,23 +1,32 @@
 const fs = require('fs');
 const projectRootPath = __dirname;
 
-const eslintPath = 'core/packages/volto/.eslintrc';
-
-let eslintCoreVoltoConfigFile;
-if (fs.existsSync(`${projectRootPath}/${eslintPath}`))
-  eslintCoreVoltoConfigFile = `${projectRootPath}/${eslintPath}`;
-else if (fs.existsSync(`${projectRootPath}/../../${eslintPath}`))
-  eslintCoreVoltoConfigFile = `${projectRootPath}/../../${eslintPath}`;
+let coreLocation;
+if (fs.existsSync(`${projectRootPath}/core`))
+  coreLocation = `${projectRootPath}/core`;
+else if (fs.existsSync(`${projectRootPath}/../../core`))
+  coreLocation = `${projectRootPath}/../../core`;
 
 module.exports = {
-  extends: eslintCoreVoltoConfigFile,
+  extends: `${coreLocation}/packages/volto/.eslintrc`,
   rules: {
     'import/no-unresolved': 1,
   },
   settings: {
     'import/resolver': {
       alias: {
-        map: [['@plone/volto', './core/packages/volto/src']],
+        map: [
+          ['@plone/volto', `${coreLocation}/packages/volto/src`],
+          [
+            '@plone/volto-slate',
+            `${coreLocation}/core/packages/volto-slate/src`,
+          ],
+          ['@plone/registry', `${coreLocation}/packages/registry/src`],
+          [
+            '@kitconcept/volto-button-block',
+            './packages/volto-button-block/src',
+          ],
+        ],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       },
     },
