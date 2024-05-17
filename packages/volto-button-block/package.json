@@ -16,9 +16,6 @@
     "access": "public"
   },
   "scripts": {
-    "init:quasar": "missdev --no-config --fetch-https",
-    "build:deps": "pnpm --filter @plone/registry --filter @plone/components build",
-    "start": "pnpm build:deps && pnpm --filter @plone/volto start",
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
     "dry-release": "release-it --dry-run",
     "release": "release-it",
@@ -36,7 +33,6 @@
   },
   "devDependencies": {
     "@plone/scripts": "^3.6.1",
-    "eslint": "8.57.0",
     "release-it": "^17.1.1"
   }
 }
