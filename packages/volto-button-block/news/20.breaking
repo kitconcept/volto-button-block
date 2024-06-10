@@ -1,0 +1,8 @@
+Compatible with the Block Model v3, via the `blockModel` opt-in flag. @sneridagh
+
+** Deprecation notice **:
+During the 3.x series of this add-on, the flag will be opt-in.
+From 4.x onwards, the model v3 will be the default for this add-on and the flag will be removed (no opt-out).
+
+The 3.x series will be the last to support tge SemanticUI button component.
+The 4.x version will support `@plone/components` `Button` component only.
