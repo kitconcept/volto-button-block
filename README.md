@@ -47,7 +47,7 @@ Create a new Volto project (you can skip this step if you already have one):
 
 ```
 npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon volto-fhnw-web25-base
+yo @plone/volto my-volto-project --addon @kitconcept/volto-button-block
 cd my-volto-project
 ```
 
