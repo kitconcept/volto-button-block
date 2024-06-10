@@ -27,6 +27,10 @@ This add-on is compatible with the Block Model v3 from 3.x series on, via an opt
 During the 3.x series of this package, the flag will be opt-in.
 When the 4.x, the Block Model v3 will be the default for this add-on and the flag will be removed (no opt-out).
 
+```js
+config.blocks.blocksConfig.__button.blockModel = 3;
+```
+
 ### SemanticUI support
 
 The 3.x series will be the last one to support a SemanticUI button.
