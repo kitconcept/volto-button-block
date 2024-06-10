@@ -12,9 +12,11 @@ const messages = defineMessages({
 });
 
 const LegacyWrapper = (props) => (
-  <div className={cx(`align ${props.data?.inneralign}`)}>
-    <div className={cx('block __button', props.className)}>
-      <div className="button container">{props.children}</div>
+  <div className={cx('block __button', props.className)}>
+    <div className="button container">
+      <div className={cx(`align ${props.data?.inneralign}`)}>
+        {props.children}
+      </div>
     </div>
   </div>
 );
