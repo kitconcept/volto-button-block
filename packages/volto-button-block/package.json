@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "@plone/scripts": "^3.6.1",
-    "eslint": "8.57.0",
     "release-it": "^17.1.1"
   }
 }
