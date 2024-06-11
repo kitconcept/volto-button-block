@@ -24,9 +24,14 @@ The Volto Button Block allows editors to add a configurable button to a Volto pa
 
 A new block model it's being developed by the community.
 This block model will change some internal structures in the Volto Block Engine.
-This add-on is compatible with the Block Model v3 from 3.x series on, via an opt-in flag.
-During the 3.x series of this package, the flag will be opt-in.
-When the 4.x, the Block Model v3 will be the default for this add-on and the flag will be removed (no opt-out).
+The new Block Model v3 will be implemented and supported initially by `@kitconcept/volto-light-theme` in its next major release.
+Later on, when it's a reality and it's polished and tested, it might be ported to Volto core.
+Read more about the [Block Model v3](https://github.com/kitconcept/volto-light-theme/blob/91039fcab0f7709fd28ea8b8a8f9e7c86291a8dd/BLOCK-MODEL-V3.md).
+This add-on is compatible with the Block Model v3 from 3.x series on, via an opt-in flag (`blockModel`).
+The flag will be opt-in during the 3.x series of this package.
+After 4.x is released, the Block Model v3 will be the default for this add-on and the flag will be removed (no opt-out configuration option will exist).
+
+Example of the usage of the flag:
 
 ```js
 config.blocks.blocksConfig.__button.blockModel = 3;
