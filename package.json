@@ -17,9 +17,9 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "pnpm build:deps && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
+    "start": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
     "start:prod": "pnpm --filter @plone/volto start:prod",
-    "build": "pnpm build:deps && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build",
+    "build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build",
     "build:deps": "pnpm --filter @plone/registry --filter @plone/components build",
     "i18n": "pnpm --filter addons i18n",
     "test": "RAZZLE_JEST_CONFIG=$(pwd)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests",

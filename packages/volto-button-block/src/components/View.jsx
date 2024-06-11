@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
 import cx from 'classnames';
-import { ConditionalLink } from '@plone/volto/components';
+import { ConditionalLink, MaybeWrap } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -11,9 +11,20 @@ const messages = defineMessages({
   },
 });
 
-const View = ({ data, isEditMode, className }) => {
+const LegacyWrapper = (props) => (
+  <div className={cx('block __button', props.className)}>
+    <div className="button container">
+      <div className={cx(`align ${props.data?.inneralign}`)}>
+        {props.children}
+      </div>
+    </div>
+  </div>
+);
+
+const View = ({ data, isEditMode, className, blocksConfig }) => {
   const [hasLink, setHasLink] = React.useState(false);
   const intl = useIntl();
+  const isBlockModelv3 = blocksConfig?.__button?.blockModel === 3;
 
   React.useEffect(() => {
     if (data.href) {
@@ -47,11 +58,9 @@ const View = ({ data, isEditMode, className }) => {
   );
 
   return (
-    <div className={cx('block __button', className)}>
-      <div className="button container">
-        <div className={cx(`align ${data?.inneralign}`)}>{link}</div>
-      </div>
-    </div>
+    <MaybeWrap condition={!isBlockModelv3} as={LegacyWrapper}>
+      {link}
+    </MaybeWrap>
   );
 };
 
