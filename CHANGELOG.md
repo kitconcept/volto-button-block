@@ -8,6 +8,28 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0 (2024-06-11)
+
+### Breaking
+
+- Compatible with the Block Model v3, via the `blockModel` opt-in flag. @sneridagh
+
+  ** Deprecation notice **:
+  During the 3.x series of this add-on, the flag will be opt-in.
+  From 4.x onwards, the model v3 will be the default for this add-on and the flag will be removed (no opt-out).
+
+  The 3.x series will be the last to support tge SemanticUI button component.
+  The 4.x version will support `@plone/components` `Button` component only. [#20](https://github.com/kitconcept/volto-button-block/pull/20)
+
+### Feature
+
+- Add Spanish translations @macagua [#13](https://github.com/kitconcept/volto-button-block/pull/13)
+- Use docker-less and project-less approach for developing @sneridagh [#17](https://github.com/kitconcept/volto-button-block/pull/17)
+
+### Internal
+
+- Improve project-less setup @sneridagh [#18](https://github.com/kitconcept/volto-button-block/pull/18)
+
 ## 2.3.1 (2023-07-21)
 
 ### Bugfix

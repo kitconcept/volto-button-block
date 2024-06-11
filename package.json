@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-button-block-dev",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "description": "volto-button-block: Volto add-on that provides a configurable button as a block.",
   "main": "src/index.js",
   "license": "MIT",
@@ -30,9 +30,9 @@
     "stylelint": "stylelint 'packages/**/src/**/*.{css,scss,less}' --allow-empty-input",
     "stylelint:fix": "stylelint 'packages/**/src/**/*.{css,scss,less}' --fix --allow-empty-input",
     "dry-release": "release-it --dry-run",
-    "release": "pnpm --filter @kitconcept/volto-button-block release-it",
-    "release-major-alpha": "pnpm --filter @kitconcept/volto-button-block release-it major --preRelease=alpha",
-    "release-alpha": "pnpm --filter @kitconcept/volto-button-block release-it --preRelease=alpha"
+    "release": "pnpm --filter @kitconcept/volto-button-block release",
+    "release-major-alpha": "pnpm --filter @kitconcept/volto-button-block release-major-alpha",
+    "release-alpha": "pnpm --filter @kitconcept/volto-button-block release-alpha"
   },
   "dependencies": {
     "@plone/volto": "workspace:*",
