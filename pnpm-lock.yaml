@@ -1395,9 +1395,6 @@ importers:
 
   packages/volto-button-block:
     dependencies:
-      '@plone/components':
-        specifier: 1.7.0
-        version: 1.7.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       classnames:
         specifier: 2.2.6
         version: 2.2.6
@@ -4047,15 +4044,6 @@ packages:
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
-
-  '@plone/components@1.7.0':
-    resolution: {integrity: sha512-T/GOFwKEhxrjp2S0sqRgTz7ZN8TcxvvPKKq7af2vARpEGWW8HszCX9CTDo0t3decSal0NqWqHiFbY2q6xbvrNA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
 
   '@plone/scripts@3.6.2':
     resolution: {integrity: sha512-52S2Nb8sUDnHobzoYBstn6UkXxri+UGEh5DWZfy0xJ9h/ia6n9XI+mjtSEG3vKkr+hsbLH9sO8RlX4tpG3Kyhg==}
@@ -7017,9 +7005,6 @@ packages:
 
   classnames@2.2.6:
     resolution: {integrity: sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==}
-
-  classnames@2.5.1:
-    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
 
   clean-css@5.3.3:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
@@ -19680,18 +19665,6 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@plone/components@1.7.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@react-aria/utils': 3.23.2(react@18.2.0)
-      '@react-spectrum/utils': 3.11.5(react@18.2.0)
-      classnames: 2.5.1
-      clsx: 2.1.0
-      lodash: 4.17.21
-      react: 18.2.0
-      react-aria-components: 1.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-    optionalDependencies:
-      react-dom: 18.2.0(react@18.2.0)
-
   '@plone/scripts@3.6.2':
     dependencies:
       '@babel/core': 7.24.1
@@ -24195,8 +24168,6 @@ snapshots:
       static-extend: 0.1.2
 
   classnames@2.2.6: {}
-
-  classnames@2.5.1: {}
 
   clean-css@5.3.3:
     dependencies:
