@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.1 (2024-06-11)
+
+### Internal
+
+- Remove `@plone/components` from dependencies @sneridagh [#0](https://github.com/kitconcept/volto-button-block/pull/0)
+
 ## 3.0.0 (2024-06-11)
 
 ### Breaking
