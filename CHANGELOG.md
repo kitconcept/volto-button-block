@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.2 (2024-10-08)
+
+### Internal
+
+- Fix peerDep on `react-intl` @sneridagh [#21](https://github.com/kitconcept/volto-button-block/pull/21)
+
 ## 3.0.1 (2024-06-11)
 
 ### Internal
