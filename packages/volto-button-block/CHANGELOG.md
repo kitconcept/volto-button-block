@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.3 (2024-10-18)
+
+### Bugfix
+
+- Fix style wrapper in view and props passed to the legacy wrapper @sneridagh [#23](https://github.com/kitconcept/volto-button-block/pull/23)
+
 ## 3.0.2 (2024-10-08)
 
 ### Internal

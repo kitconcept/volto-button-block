@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-button-block",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "volto-button-block: Volto add-on that provides a configurable button as a block.",
   "main": "src/index.js",
   "license": "MIT",
