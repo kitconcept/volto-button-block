@@ -12,16 +12,17 @@ const messages = defineMessages({
 });
 
 const LegacyWrapper = (props) => (
-  <div className={cx('block __button', props.className)}>
+  <div className={cx('block __button', props.className)} style={props.style}>
     <div className="button container">
-      <div className={cx(`align ${props.data?.inneralign}`)}>
+      <div className={cx('align', props.data?.inneralign)}>
         {props.children}
       </div>
     </div>
   </div>
 );
 
-const View = ({ data, isEditMode, className, blocksConfig }) => {
+const View = (props) => {
+  const { data, isEditMode, blocksConfig } = props;
   const [hasLink, setHasLink] = React.useState(false);
   const intl = useIntl();
   const isBlockModelv3 = blocksConfig?.__button?.blockModel === 3;
@@ -58,7 +59,7 @@ const View = ({ data, isEditMode, className, blocksConfig }) => {
   );
 
   return (
-    <MaybeWrap condition={!isBlockModelv3} as={LegacyWrapper}>
+    <MaybeWrap {...props} condition={!isBlockModelv3} as={LegacyWrapper}>
       {link}
     </MaybeWrap>
   );
