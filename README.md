@@ -12,11 +12,11 @@ The Volto Button Block allows editors to add a configurable button to a Volto pa
 
 ## Screenshot
 
-![Button-Block](https://github.com/kitconcept/volto-button-block/raw/master/screenshot.png)
+![Button-Block](https://github.com/kitconcept/volto-button-block/raw/main/screenshot.png)
 
 ## Screencast
 
-![Button-Block](https://github.com/kitconcept/volto-button-block/raw/master/screencast.gif)
+![Button-Block](https://github.com/kitconcept/volto-button-block/raw/main/screencast.gif)
 
 ## Upgrade Guide
 
