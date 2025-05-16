@@ -22,14 +22,20 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
+  "addons": [
+    "@kitconcept/volto-bm3-compat"
+  ],
+  "dependencies": {
+    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1"
+  },
   "peerDependencies": {
-    "classnames": "^2.2.6",
+    "classnames": "^2.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intl": "^3.12.1"
   },
   "devDependencies": {
     "@plone/scripts": "^3.6.2",
-    "release-it": "^17.7.0"
+    "release-it": "^19.0.2"
   }
 }

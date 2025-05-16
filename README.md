@@ -1,3 +1,8 @@
+<picture>
+  <source align="right" width="200" media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img align="right" width="200" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
+
 # Volto Button Block
 
 [![BlockModelv3 Ready](https://github.com/kitconcept/volto-light-theme/blob/main/BMv3-ready.svg)](https://github.com/kitconcept/volto-light-theme/blob/91039fcab0f7709fd28ea8b8a8f9e7c86291a8dd/BLOCK-MODEL-V3.md)
@@ -5,8 +10,6 @@
 [![Build Status](https://github.com/kitconcept/volto-button-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-button-block/actions)
 [![Build Status](https://github.com/kitconcept/volto-button-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-button-block/actions)
 [![Build Status](https://github.com/kitconcept/volto-button-block/actions/workflows/acceptance.yml/badge.svg)](https://github.com/kitconcept/volto-button-block/actions)
-
-![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
 
 The Volto Button Block allows editors to add a configurable button to a Volto page.
 
