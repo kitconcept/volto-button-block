@@ -1546,6 +1546,9 @@ importers:
 
   packages/volto-button-block:
     dependencies:
+      '@kitconcept/volto-bm3-compat':
+        specifier: 1.0.0-alpha.0
+        version: 1.0.0-alpha.0(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       classnames:
         specifier: ^2.2.6
         version: 2.2.6
@@ -3367,6 +3370,13 @@ packages:
 
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+
+  '@kitconcept/volto-bm3-compat@1.0.0-alpha.0':
+    resolution: {integrity: sha512-kAM0j5z4eKmyewEU2OL2wHTvYgDbvewJ6FQOCWDgnEZ+g6VWFPH7sgTsM9ns0gh0E+CIquusybUwzSNqCuR8TQ==}
+    peerDependencies:
+      classnames: ^2.2.6
+      react: 18.2.0
+      react-dom: 18.2.0
 
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
@@ -18018,6 +18028,12 @@ snapshots:
 
   '@juggle/resize-observer@3.4.0': {}
 
+  '@kitconcept/volto-bm3-compat@1.0.0-alpha.0(classnames@2.2.6)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      classnames: 2.2.6
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
   '@kwsites/file-exists@1.1.1':
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
@@ -21585,7 +21601,7 @@ snapshots:
   '@types/vinyl@2.0.11':
     dependencies:
       '@types/expect': 1.20.4
-      '@types/node': 20.11.30
+      '@types/node': 22.15.18
 
   '@types/ws@8.5.10':
     dependencies:

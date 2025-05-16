@@ -1,8 +1,9 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { FormFieldWrapper } from '@plone/volto/components';
-import { Icon } from '@plone/volto/components';
 import { Button } from 'semantic-ui-react';
+import FormFieldWrapper from '@plone/volto/components/manage/Widgets/FormFieldWrapper';
+import Icon from '@plone/volto/components/theme/Icon/Icon';
+
 import imageLeftSVG from '@plone/volto/icons/image-left.svg';
 import imageRightSVG from '@plone/volto/icons/image-right.svg';
 import imageFitSVG from '@plone/volto/icons/image-fit.svg';

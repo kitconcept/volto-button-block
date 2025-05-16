@@ -1,5 +1,5 @@
 import React from 'react';
-import { SidebarPortal } from '@plone/volto/components';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
 import Sidebar from './Sidebar';
 import View from './View';
 

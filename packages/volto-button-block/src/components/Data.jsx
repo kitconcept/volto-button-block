@@ -1,7 +1,6 @@
-import React from 'react';
-import { ButtonSchema } from './schema';
-import { BlockDataForm } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
+import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
+import { ButtonSchema } from './schema';
 
 const messages = defineMessages({
   ButtonBlock: {
