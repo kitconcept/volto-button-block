@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.0 (2025-05-19)
+
+### Internal
+
+- Re-release for update metadata and READMEs. @sneridagh 
+
 ## 3.0.3 (2024-10-18)
 
 ### Bugfix
