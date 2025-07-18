@@ -51,7 +51,7 @@ module.exports = {
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
           [
             '@kitconcept/volto-button-block',
-            './packages/volto-button-block/src',
+            `${projectRootPath}/packages/volto-button-block/src`,
           ],
           ...addonAliases,
         ],
