@@ -1,10 +1,12 @@
 node_modules
+core
+.changelog.draft
+build
+.DS_Store
+public
 
-# yarn 3
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+/bin
+/lib
+pyvenv.cfg
+docs/_build
+cypress/downloads/
