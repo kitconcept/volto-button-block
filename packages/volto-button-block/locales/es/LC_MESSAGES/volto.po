@@ -1,11 +1,11 @@
 # Translation of volto.pot to Spanish
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023.
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-09 11:45-0400\n"
-"PO-Revision-Date: 2023-08-12 19:37-0400\n"
+"PO-Revision-Date: 2025-07-22 01:32+0200\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language: es\n"
@@ -18,66 +18,65 @@ msgstr ""
 "Language-Name: Español\n"
 "Domain: volto\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.6\n"
 
+#. Default: "Inner Alignment"
 #: components/schema
-# defaultMessage: Inner Alignment
 msgid " Inner Alignment"
 msgstr " Alineación interna"
 
+#. Default: "Alignment"
 #: components/schema
-# defaultMessage: Alignment
 msgid "Alignment"
 msgstr "Alineación"
 
+#. Default: "Button"
 #: components/Data
 #: components/schema
-# defaultMessage: Button
 msgid "Button Block"
-msgstr "Bloque en botón"
+msgstr "Bloque de botón"
 
+#. Default: "Button text"
 #: components/View
-# defaultMessage: Button text
 msgid "Button text"
 msgstr "Botón de Texto"
 
+#. Default: "Center"
 #: components/Widgets/AlignWidget
-# defaultMessage: Center
 msgid "Center"
-msgstr "Centrado"
+msgstr "Centro"
 
+#. Default: "Full"
 #: components/Widgets/AlignWidget
-# defaultMessage: Full
 msgid "Full"
 msgstr "Completo"
 
+#. Default: "Left"
 #: components/Widgets/AlignWidget
-# defaultMessage: Left
 msgid "Left"
 msgstr "Izquierda"
 
+#. Default: "Link"
 #: components/schema
-# defaultMessage: Link
 msgid "Link"
 msgstr "Enlace"
 
+#. Default: "Open in a new tab"
 #: components/schema
-# defaultMessage: Open in a new tab
 msgid "Open in a new tab"
 msgstr "Abrir en una nueva pestaña"
 
+#. Default: "Right"
 #: components/Widgets/AlignWidget
-# defaultMessage: Right
 msgid "Right"
 msgstr "Derecha"
 
+#. Default: "Title"
 #: components/schema
-# defaultMessage: Title
 msgid "Title"
 msgstr "Título"
 
+#. Default: "Wide"
 #: components/Widgets/AlignWidget
-# defaultMessage: Wide
 msgid "Wide"
 msgstr "Ancho"
-
