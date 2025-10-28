@@ -20,6 +20,16 @@
       }
     }
   }
+
+  .button.container,
+  .block-inner-container {
+    /* Basic CSS for the use case when the button is just a link */
+    a {
+      padding: 8px 20px;
+      border: 1px solid var(--button-block-border-color, #000);
+      text-decoration: none;
+    }
+  }
 }
 
 .align-buttons {
