@@ -26,7 +26,8 @@
     "@kitconcept/volto-bm3-compat"
   ],
   "dependencies": {
-    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1"
+    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1",
+    "@plone/components": "workspace:*"
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
