@@ -37,9 +37,9 @@
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
-    "@plone/volto": "workspace:*",
+    "@kitconcept/volto-button-block": "workspace:*",
     "@plone/registry": "workspace:*",
-    "@kitconcept/volto-button-block": "workspace:*"
+    "@plone/volto": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
@@ -48,7 +48,10 @@
     "overrides": {
       "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
       "react-refresh": "^0.14.2"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@swc/core"
+    ]
   },
-  "packageManager": "pnpm@9.1.1"
+  "packageManager": "pnpm@10.18.3"
 }
