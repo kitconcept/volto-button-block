@@ -8,6 +8,22 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0-alpha.2 (2025-10-28)
+
+### Breaking
+
+- Removed SemancticUI Button, use `@plone/components` button instead. @sneridagh [#30](https://github.com/kitconcept/volto-button-block/pull/30)
+
+### Feature
+
+- This PR improves accessibility by rendering a semantic `<a>` tag instead of a `<Button>` when the component is linked (data.href). Buttons are meant for actions, while links indicate navigation. Using the correct HTML element helps assistive technologies (like screen readers) interpret the component properly and enhances keyboard navigation and semantics.
+
+  In edit mode, the button is still wrapped in a ConditionalLink, as before. In view mode, a plain `<a>` tag is rendered when a link is present, and a `<Button>` is used only if no link exists.
+
+  @tomschall [#26](https://github.com/kitconcept/volto-button-block/pull/26)
+- Update Spanish translations #27 @macagua [#27](https://github.com/kitconcept/volto-button-block/pull/27)
+- Transfer VLT enhanced schema to the add-on. @sneridagh [#30](https://github.com/kitconcept/volto-button-block/pull/30)
+
 ## 4.0.0-alpha.1 (2025-10-28)
 
 ### Breaking
