@@ -53,7 +53,8 @@ export const ButtonSchema = (props) => {
       },
       inneralign: {
         title: props.intl.formatMessage(messages.innerAlign),
-        widget: 'inner_align',
+        widget: 'align',
+        actions: ['left', 'center', 'right'],
         default: 'left',
       },
       openLinkInNewTab: {

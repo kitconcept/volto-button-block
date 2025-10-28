@@ -2,7 +2,7 @@
   "name": "@kitconcept/volto-button-block",
   "version": "4.0.0-alpha.0",
   "description": "volto-button-block: Volto add-on that provides a configurable button as a block.",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "keywords": [
     "volto-addon",
@@ -35,7 +35,16 @@
     "react-intl": "^3.12.1"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.6.2",
-    "release-it": "^19.0.2"
+    "@plone/scripts": "^3.10.3",
+    "@plone/types": "workspace:*",
+    "@testing-library/cypress": "10.0.3",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^24",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "release-it": "^19.0.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4"
   }
 }
