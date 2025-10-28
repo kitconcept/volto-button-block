@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Button } from 'semantic-ui-react';
+import { Button } from '@plone/components';
 import cx from 'classnames';
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
@@ -36,23 +36,36 @@ const View = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.href]);
 
-  let link = hasLink ? (
-    data.href.length > 0 && (
-      <ConditionalLink
-        to={data.href[0]?.['@id']}
-        condition={!isEditMode}
-        openLinkInNewTab={data.openLinkInNewTab}
-      >
-        <Button className={(cx('button'), data.align)}>
+  let link;
+  if (hasLink && data.href.length > 0) {
+    if (isEditMode) {
+      link = (
+        <ConditionalLink
+          to={data.href[0]?.['@id']}
+          condition={!isEditMode}
+          openLinkInNewTab={data.openLinkInNewTab}
+          item={data.href[0]}
+        >
+          <Button className={(cx('button'), data.align)}>
+            {data.title || intl.formatMessage(messages.ButtonText)}
+          </Button>
+        </ConditionalLink>
+      );
+    } else {
+      // Accessibility: Render as <a> tag in view mode when link exists
+      link = (
+        <a href={data.href[0]?.['@id']} className={cx('button', data.align)}>
           {data.title || intl.formatMessage(messages.ButtonText)}
-        </Button>
-      </ConditionalLink>
-    )
-  ) : (
-    <Button className="noLink">
-      {data.title || intl.formatMessage(messages.ButtonText)}
-    </Button>
-  );
+        </a>
+      );
+    }
+  } else {
+    link = (
+      <Button className="noLink">
+        {data.title || intl.formatMessage(messages.ButtonText)}
+      </Button>
+    );
+  }
 
   return (
     <BlockWrapper {...props} ExtraWrapper={LegacyWrapper}>
