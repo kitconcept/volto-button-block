@@ -1,0 +1,1 @@
+Removed SemancticUI Button, use `@plone/components` button instead. @sneridagh
