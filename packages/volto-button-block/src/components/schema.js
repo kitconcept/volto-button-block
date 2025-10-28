@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
 
 const messages = defineMessages({
   ButtonBlock: {
@@ -25,18 +26,25 @@ const messages = defineMessages({
     id: 'Open in a new tab',
     defaultMessage: 'Open in a new tab',
   },
+  BlockWidth: {
+    id: 'Block Width',
+    defaultMessage: 'Block Width',
+  },
+  Alignment: {
+    id: 'Alignment',
+    defaultMessage: 'Alignment',
+  },
 });
 
 export const ButtonSchema = (props) => {
   const { intl } = props;
-
-  return {
+  const schema = {
     title: intl.formatMessage(messages.ButtonBlock),
     fieldsets: [
       {
         id: 'default',
         title: 'Default',
-        fields: ['title', 'href', 'openLinkInNewTab', 'inneralign'],
+        fields: ['title', 'href', 'openLinkInNewTab'],
       },
     ],
 
@@ -51,11 +59,6 @@ export const ButtonSchema = (props) => {
         selectedItemAttrs: ['Title', 'Description', 'hasPreviewImage'],
         allowExternals: true,
       },
-      inneralign: {
-        title: props.intl.formatMessage(messages.innerAlign),
-        widget: 'inner_align',
-        default: 'left',
-      },
       openLinkInNewTab: {
         title: intl.formatMessage(messages.openLinkInNewTab),
         type: 'boolean',
@@ -63,4 +66,31 @@ export const ButtonSchema = (props) => {
     },
     required: [],
   };
+
+  addStyling({ schema, intl });
+
+  schema.properties.styles.schema.fieldsets[0].fields = [
+    'blockWidth:noprefix',
+    ...schema.properties.styles.schema.fieldsets[0].fields,
+  ];
+
+  schema.properties.styles.schema.fieldsets[0].fields = [
+    'align:noprefix',
+    ...schema.properties.styles.schema.fieldsets[0].fields,
+  ];
+
+  schema.properties.styles.schema.properties['blockWidth:noprefix'] = {
+    widget: 'blockWidth',
+    title: intl.formatMessage(messages.BlockWidth),
+    default: 'default',
+    filterActions: ['narrow', 'default'],
+  };
+
+  schema.properties.styles.schema.properties['align:noprefix'] = {
+    widget: 'blockAlignment',
+    title: intl.formatMessage(messages.Alignment),
+    default: 'left',
+  };
+
+  return schema;
 };

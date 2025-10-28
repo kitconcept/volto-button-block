@@ -39,6 +39,11 @@ module.exports = {
         message:
           'Importing from barrel files is not allowed. Please use direct imports of the modules instead.',
       },
+      {
+        name: 'semantic-ui-react',
+        message:
+          'Semantic UI is not allowed in this add-on. Please use `@plone/components` instead.',
+      },
     ],
     'react/jsx-key': [2, { checkFragmentShorthand: true }],
   },
@@ -51,7 +56,7 @@ module.exports = {
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
           [
             '@kitconcept/volto-button-block',
-            './packages/volto-button-block/src',
+            `${projectRootPath}/packages/volto-button-block/src`,
           ],
           ...addonAliases,
         ],

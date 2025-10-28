@@ -69,11 +69,11 @@ lint: ## Lint Codebase
 
 .PHONY: release
 release: ## Release the add-on on npmjs.org
-	pnpm release
+	pnpm release --config .release-it-local.json
 
 .PHONY: release-dry-run
 release-dry-run: ## Dry-run the release of the add-on on npmjs.org
-	pnpm release
+	pnpm dry-release --config .release-it-local.json
 
 .PHONY: test
 test: ## Run unit tests
@@ -81,7 +81,8 @@ test: ## Run unit tests
 
 .PHONY: test-ci
 ci-test: ## Run unit tests in CI
-	CI=1 RAZZLE_JEST_CONFIG=$(CURRENT_DIR)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests
+	VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n
+	CI=1 pnpm test --passWithNoTests
 
 .PHONY: backend-docker-start
 backend-docker-start:	## Starts a Docker-based backend for development

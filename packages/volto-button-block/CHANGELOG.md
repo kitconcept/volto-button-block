@@ -3,10 +3,20 @@
 <!-- You should *NOT* be adding new change log entries to this file.
      You should create a file in the news directory instead.
      For helpful instructions, please see:
-     https://6.docs.plone.org/volto/developer-guidelines/contributing.html#create-a-pull-request
+     https://6.docs.plone.org/volto/developer-guidelines/contributing.html#create-a-pull-request 
 -->
 
 <!-- towncrier release notes start -->
+
+## 4.0.0-alpha.1 (2025-10-28)
+
+### Breaking
+
+- Removed local `AlignWidget`, move it to use the default Volto 19 one (or the VLT one). @sneridagh [#29](https://github.com/kitconcept/volto-button-block/pull/29)
+
+### Feature
+
+- Refactor to use TypeScript and best practices. @sneridagh [#29](https://github.com/kitconcept/volto-button-block/pull/29)
 
 ## 4.0.0-alpha.0 (2025-05-19)
 
