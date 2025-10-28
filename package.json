@@ -50,7 +50,15 @@
       "react-refresh": "^0.14.2"
     },
     "onlyBuiltDependencies": [
-      "@swc/core"
+      "core-js",
+      "core-js-pure",
+      "cypress",
+      "es5-ext",
+      "esbuild",
+      "full-icu",
+      "lightningcss-cli",
+      "sharp",
+      "unrs-resolver"
     ]
   },
   "packageManager": "pnpm@10.18.3"
