@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Button } from 'semantic-ui-react';
+import { Button } from '@plone/components';
 import cx from 'classnames';
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
