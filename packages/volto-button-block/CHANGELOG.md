@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 4.0.0 (2025-10-30)
+
+### Internal
+
+- Release 4.0.0 final. @sneridagh 
+
 ## 4.0.0-alpha.0 (2025-05-19)
 
 ### Internal
