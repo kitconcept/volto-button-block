@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 5.0.0-alpha.0 (2025-10-31)
+
+### Internal
+
+- Re-release 4a2 as 5a0. @sneridagh 
+
 ## 4.0.0-alpha.2 (2025-10-28)
 
 ### Breaking
