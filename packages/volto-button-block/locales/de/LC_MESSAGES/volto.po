@@ -26,6 +26,11 @@ msgstr "Ausrichtung"
 msgid "Alignment"
 msgstr "Ausrichtung"
 
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr "Blockbreite"
+
 #. Default: "Button"
 #: components/Data
 #: components/schema
@@ -35,21 +40,6 @@ msgstr "Knopf"
 #. Default: "Button text"
 #: components/View
 msgid "Button text"
-msgstr ""
-
-#. Default: "Center"
-#: components/Widgets/AlignWidget
-msgid "Center"
-msgstr ""
-
-#. Default: "Full"
-#: components/Widgets/AlignWidget
-msgid "Full"
-msgstr ""
-
-#. Default: "Left"
-#: components/Widgets/AlignWidget
-msgid "Left"
 msgstr ""
 
 #. Default: "Link"
@@ -62,17 +52,7 @@ msgstr "Verlinkung"
 msgid "Open in a new tab"
 msgstr "In neuem Browser-Tab öffnen"
 
-#. Default: "Right"
-#: components/Widgets/AlignWidget
-msgid "Right"
-msgstr ""
-
 #. Default: "Title"
 #: components/schema
 msgid "Title"
 msgstr "Titel"
-
-#. Default: "Wide"
-#: components/Widgets/AlignWidget
-msgid "Wide"
-msgstr ""

@@ -26,6 +26,11 @@ msgstr "Alinhamento interno"
 msgid "Alignment"
 msgstr "Alinhamento"
 
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr "Largura do bloco"
+
 #. Default: "Button"
 #: components/Data
 #: components/schema
@@ -35,22 +40,7 @@ msgstr "Bloco de Botão"
 #. Default: "Button text"
 #: components/View
 msgid "Button text"
-msgstr ""
-
-#. Default: "Center"
-#: components/Widgets/AlignWidget
-msgid "Center"
-msgstr "Centralizado"
-
-#. Default: "Full"
-#: components/Widgets/AlignWidget
-msgid "Full"
-msgstr "Completo"
-
-#. Default: "Left"
-#: components/Widgets/AlignWidget
-msgid "Left"
-msgstr "Esquerda"
+msgstr "Texto do botão"
 
 #. Default: "Link"
 #: components/schema
@@ -60,19 +50,9 @@ msgstr "Link"
 #. Default: "Open in a new tab"
 #: components/schema
 msgid "Open in a new tab"
-msgstr ""
-
-#. Default: "Right"
-#: components/Widgets/AlignWidget
-msgid "Right"
-msgstr "Direita"
+msgstr "Abrir em nova aba"
 
 #. Default: "Title"
 #: components/schema
 msgid "Title"
 msgstr "Título"
-
-#. Default: "Wide"
-#: components/Widgets/AlignWidget
-msgid "Wide"
-msgstr "Largo"

@@ -18,12 +18,17 @@ msgstr ""
 #. Default: "Inner Alignment"
 #: components/schema
 msgid " Inner Alignment"
-msgstr ""
+msgstr "Interne uitlijning"
 
 #. Default: "Alignment"
 #: components/schema
 msgid "Alignment"
 msgstr "Uitlijning"
+
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr "Blokbreedte"
 
 #. Default: "Button"
 #: components/Data
@@ -34,22 +39,7 @@ msgstr "Knop"
 #. Default: "Button text"
 #: components/View
 msgid "Button text"
-msgstr ""
-
-#. Default: "Center"
-#: components/Widgets/AlignWidget
-msgid "Center"
-msgstr ""
-
-#. Default: "Full"
-#: components/Widgets/AlignWidget
-msgid "Full"
-msgstr ""
-
-#. Default: "Left"
-#: components/Widgets/AlignWidget
-msgid "Left"
-msgstr ""
+msgstr "Knoptekst"
 
 #. Default: "Link"
 #: components/schema
@@ -59,19 +49,9 @@ msgstr "Link"
 #. Default: "Open in a new tab"
 #: components/schema
 msgid "Open in a new tab"
-msgstr ""
-
-#. Default: "Right"
-#: components/Widgets/AlignWidget
-msgid "Right"
-msgstr ""
+msgstr "Openen in een nieuw tabblad"
 
 #. Default: "Title"
 #: components/schema
 msgid "Title"
 msgstr "Titel"
-
-#. Default: "Wide"
-#: components/Widgets/AlignWidget
-msgid "Wide"
-msgstr ""
