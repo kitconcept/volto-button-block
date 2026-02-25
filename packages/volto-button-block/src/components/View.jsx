@@ -3,6 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Button } from '@plone/components';
 import cx from 'classnames';
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
+import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
 
 const messages = defineMessages({
@@ -14,7 +15,9 @@ const messages = defineMessages({
 
 const LegacyWrapper = (props) => (
   <div className="button container">
-    <div className={cx('align', props.data?.inneralign)}>{props.children}</div>
+    <div className={cx('align', props.data?.styles?.['align:noprefix'])}>
+      {props.children}
+    </div>
   </div>
 );
 
@@ -54,9 +57,9 @@ const View = (props) => {
     } else {
       // Accessibility: Render as <a> tag in view mode when link exists
       link = (
-        <a href={data.href[0]?.['@id']} className={cx('button', data.align)}>
+        <UniversalLink href={data.href[0]?.['@id']} className={cx('button')}>
           {data.title || intl.formatMessage(messages.ButtonText)}
-        </a>
+        </UniversalLink>
       );
     }
   } else {
