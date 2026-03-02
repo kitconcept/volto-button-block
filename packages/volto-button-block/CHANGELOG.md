@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 5.0.0-alpha.1 (2026-03-02)
+
+### Bugfix
+
+- Fix external class handling and align styling @iRohitSingh [#34](https://github.com/kitconcept/volto-button-block/pull/34)
+
+### Internal
+
+- Updated translations. @humanaice [#32](https://github.com/kitconcept/volto-button-block/pull/32)
+
 ## 5.0.0-alpha.0 (2025-10-31)
 
 ### Internal
