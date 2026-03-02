@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 5.0.0-alpha.2 (2026-03-02)
+
+### Bugfix
+
+- Fix className @iRohitSingh [#35](https://github.com/kitconcept/volto-button-block/pull/35)
+
 ## 5.0.0-alpha.1 (2026-03-02)
 
 ### Bugfix
