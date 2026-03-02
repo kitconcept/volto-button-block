@@ -1,5 +1,5 @@
-# Translation of volto.pot to Spanish
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023, 2025.
+#. Translation of volto.pot to Spanish
+#. Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
@@ -7,12 +7,12 @@ msgstr ""
 "POT-Creation-Date: 2023-05-09 11:45-0400\n"
 "PO-Revision-Date: 2025-07-22 01:32+0200\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
-"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language: es\n"
-"MIME-Version: 1.0\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
 "Preferred-Encodings: utf-8\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
@@ -30,6 +30,11 @@ msgstr " Alineación interna"
 msgid "Alignment"
 msgstr "Alineación"
 
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr "Ancho del bloque"
+
 #. Default: "Button"
 #: components/Data
 #: components/schema
@@ -41,21 +46,6 @@ msgstr "Bloque de botón"
 msgid "Button text"
 msgstr "Botón de Texto"
 
-#. Default: "Center"
-#: components/Widgets/AlignWidget
-msgid "Center"
-msgstr "Centro"
-
-#. Default: "Full"
-#: components/Widgets/AlignWidget
-msgid "Full"
-msgstr "Completo"
-
-#. Default: "Left"
-#: components/Widgets/AlignWidget
-msgid "Left"
-msgstr "Izquierda"
-
 #. Default: "Link"
 #: components/schema
 msgid "Link"
@@ -66,17 +56,7 @@ msgstr "Enlace"
 msgid "Open in a new tab"
 msgstr "Abrir en una nueva pestaña"
 
-#. Default: "Right"
-#: components/Widgets/AlignWidget
-msgid "Right"
-msgstr "Derecha"
-
 #. Default: "Title"
 #: components/schema
 msgid "Title"
 msgstr "Título"
-
-#. Default: "Wide"
-#: components/Widgets/AlignWidget
-msgid "Wide"
-msgstr "Ancho"

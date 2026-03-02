@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-03-21T09:47:55.308Z\n"
+"POT-Creation-Date: 2026-02-23T17:26:39.443Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -23,6 +23,11 @@ msgstr ""
 msgid "Alignment"
 msgstr ""
 
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr ""
+
 #. Default: "Button"
 #: components/Data
 #: components/schema
@@ -32,21 +37,6 @@ msgstr ""
 #. Default: "Button text"
 #: components/View
 msgid "Button text"
-msgstr ""
-
-#. Default: "Center"
-#: components/Widgets/AlignWidget
-msgid "Center"
-msgstr ""
-
-#. Default: "Full"
-#: components/Widgets/AlignWidget
-msgid "Full"
-msgstr ""
-
-#. Default: "Left"
-#: components/Widgets/AlignWidget
-msgid "Left"
 msgstr ""
 
 #. Default: "Link"
@@ -59,17 +49,7 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#. Default: "Right"
-#: components/Widgets/AlignWidget
-msgid "Right"
-msgstr ""
-
 #. Default: "Title"
 #: components/schema
 msgid "Title"
-msgstr ""
-
-#. Default: "Wide"
-#: components/Widgets/AlignWidget
-msgid "Wide"
 msgstr ""
