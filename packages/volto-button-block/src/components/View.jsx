@@ -15,9 +15,7 @@ const messages = defineMessages({
 
 const LegacyWrapper = (props) => (
   <div className="button container">
-    <div className={cx('align', props.data?.styles?.['align:noprefix'])}>
-      {props.children}
-    </div>
+    <div className={cx('align', props.data?.inneralign)}>{props.children}</div>
   </div>
 );
 
@@ -57,7 +55,10 @@ const View = (props) => {
     } else {
       // Accessibility: Render as <a> tag in view mode when link exists
       link = (
-        <UniversalLink href={data.href[0]?.['@id']} className={cx('button')}>
+        <UniversalLink
+          href={data.href[0]?.['@id']}
+          className={cx('button', data.align)}
+        >
           {data.title || intl.formatMessage(messages.ButtonText)}
         </UniversalLink>
       );
