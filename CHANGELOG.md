@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 5.0.0 (2026-09-16)
+
+### Internal
+
+- Update to latest Volto, final release. @sneridagh [#updateVolto](https://github.com/kitconcept/volto-button-block/pull/updateVolto)
+
 ## 5.0.0-alpha.2 (2026-03-02)
 
 ### Bugfix
