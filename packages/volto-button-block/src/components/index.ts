@@ -2,6 +2,7 @@ import Edit from './Edit';
 import View from './View';
 import circleMenuSVG from '@plone/volto/icons/circle-menu.svg';
 import { ButtonSchema } from './schema';
+import { ButtonBlockDataAdapter } from './adapter';
 import type { BlockConfigBase } from '@plone/types';
 
 const blockConfig: BlockConfigBase = {
@@ -16,6 +17,7 @@ const blockConfig: BlockConfigBase = {
   sidebarTab: 1,
   category: 'action',
   blockSchema: ButtonSchema,
+  dataAdapter: ButtonBlockDataAdapter,
 };
 
 export default blockConfig;

@@ -36,8 +36,7 @@ const messages = defineMessages({
   },
 });
 
-export const ButtonSchema = (props) => {
-  const { intl } = props;
+export const ButtonSchema = ({ intl }) => {
   const schema = {
     title: intl.formatMessage(messages.ButtonBlock),
     fieldsets: [
@@ -50,10 +49,10 @@ export const ButtonSchema = (props) => {
 
     properties: {
       title: {
-        title: props.intl.formatMessage(messages.ButtonTitle),
+        title: intl.formatMessage(messages.ButtonTitle),
       },
       href: {
-        title: props.intl.formatMessage(messages.ButtonLink),
+        title: intl.formatMessage(messages.ButtonLink),
         widget: 'object_browser',
         mode: 'link',
         selectedItemAttrs: ['Title', 'Description', 'hasPreviewImage'],
