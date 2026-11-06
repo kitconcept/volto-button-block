@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 5.1.0 (2026-11-06)
+
+### Feature
+
+- The Button block is now documented for the `@blocks-schema` endpoint of Volto 19.6: its schema is registered in the block configuration, and its settings form saves changes through a data adapter. Its documentation describes the stored data, with a complete example, so agents and generated reference docs can write button data correctly. [#36](https://github.com/kitconcept/volto-button-block/pull/36)
+
 ## 5.0.0 (2026-09-16)
 
 ### Internal
