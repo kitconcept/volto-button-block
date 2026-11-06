@@ -106,6 +106,10 @@ If this package provides a Volto theme, and you want to activate it, then add th
 const theme = '@kitconcept/volto-button-block';
 ```
 
+### Block documentation and schema
+
+The `@blocks-schema` support, which publishes the block schema and documentation of the Button block from the Volto server, requires Volto 19.6 or later. The add-on keeps working on older Volto 19 without it.
+
 ## Test installation
 
 Visit http://localhost:3000/ in a browser, login, and check the awesome new features.
